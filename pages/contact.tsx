@@ -1,13 +1,13 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 
-const Pricing: NextPage = () => {
+const Contact: NextPage = () => {
   return (
     <>
-      <div>Free!</div>
+      <div>Contact</div>
       <Link href="/">top</Link>
     </>
   );
 };
 
-export default Pricing;
+export default Contact;

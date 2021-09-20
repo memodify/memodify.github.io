@@ -4,9 +4,18 @@ import Link from "next/link";
 const Home: NextPage = () => {
   return (
     <div>
-      <Link href="/pricing">
-        <a>Pricing</a>
-      </Link>
+      <ul>
+        <li>
+          <Link href="/about">
+            <a>About</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/contact">
+            <a>Contact</a>
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 };
