@@ -16,6 +16,9 @@ const Home: NextPage = () => {
           </Link>
         </li>
       </ul>
+      <main>
+        <a href="//app.memodify.com">Getting Started</a>
+      </main>
     </div>
   );
 };
