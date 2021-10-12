@@ -83,6 +83,8 @@ const Home: NextPage = () => {
           <p className="text-gray-500">You have a new message!</p>
         </div>
       </div>
+
+      {/* https://tailwindui.com/preview */}
       <div className="lg:flex lg:items-center lg:justify-between">
         <div className="flex-1 min-w-0">
           <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
@@ -273,9 +275,7 @@ const Home: NextPage = () => {
           </span>
         </div>
       </div>
-      <div>
-        footer.
-      </div>
+      <div>footer.</div>
     </>
   );
 };
