@@ -9,8 +9,10 @@ export function setupGA(gaId: string | undefined) {
   document.getElementById(gtagScriptId)?.remove();
   document.getElementById(gtagId)?.remove();
   if (!gaId) {
+    console.debug(`no given measurement-id.`);
     return;
   }
+  console.debug(`will set up GA.`);
 
   const loadGtag = document.createElement("script");
   loadGtag.id = gtagId;

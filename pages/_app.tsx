@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { setupGA, useTracking } from "../lib/ga";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const id = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_TRACKING_ID;
+  const id = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_MEASUREMENT_ID;
   useEffect(() => {
     setupGA(id);
   });

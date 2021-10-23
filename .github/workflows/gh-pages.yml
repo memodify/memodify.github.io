@@ -7,7 +7,11 @@ on:
 
 jobs:
   build-deploy:
-    environment: github-pages
+    environment:
+      name: github-pages
+      url: https://www.memodify.com
+    env:
+      NEXT_PUBLIC_GOOGLE_ANALYTICS_MEASUREMENT_ID: ${{ secrets.GOOGLE_ANALYTICS_MEASUREMENT_ID }}
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
