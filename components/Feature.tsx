@@ -9,21 +9,22 @@ export default function Feature() {
         </h1>
         <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
           <div className="p-4 md:w-1/3 flex">
-            {/* <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 mb-4 flex-shrink-0">
+            <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 mb-4 flex-shrink-0">
               <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
                 fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-6 h-6"
                 viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                <circle cx="6" cy="6" r="3"></circle>
-                <circle cx="6" cy="18" r="3"></circle>
-                <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+                />
               </svg>
-            </div> */}
+            </div>
             <div className="flex-grow pl-6">
               <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
                 Daily Noting
@@ -52,26 +53,28 @@ export default function Feature() {
             </div>
           </div>
           <div className="p-4 md:w-1/3 flex">
-            {/* <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 mb-4 flex-shrink-0">
+            <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 mb-4 flex-shrink-0">
               <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
                 fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-6 h-6"
                 viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
+                />
               </svg>
-            </div> */}
+            </div>
             <div className="flex-grow pl-6">
               <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
                 Markdown with MDX
               </h2>
               <p className="leading-relaxed text-base">
-                Memodify is a note-taking application supporting{" "}
+                Memodify is a note-taking application supporting
                 <a href="https://mdxjs.com/" target="mdx">
                   MDX
                 </a>
@@ -99,19 +102,22 @@ export default function Feature() {
             </div>
           </div>
           <div className="p-4 md:w-1/3 flex">
-            {/* <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 mb-4 flex-shrink-0">
+            <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 mb-4 flex-shrink-0">
               <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
                 fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-6 h-6"
                 viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"
+                />
               </svg>
-            </div> */}
+            </div>
             <div className="flex-grow pl-6">
               <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
                 All in local
