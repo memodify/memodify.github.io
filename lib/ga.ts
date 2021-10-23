@@ -1,4 +1,4 @@
-import { useRouter } from "next/dist/client/router";
+import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 // https://qiita.com/Nishi53454367/items/b74c66c988539a7f8d4d
