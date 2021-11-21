@@ -2,7 +2,7 @@ export default function Feature() {
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
-        <h1 className="sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-20">
+        <h1 className="sm:text-3xl text-2xl font-bold title-font text-center text-gray-900 mb-20">
           Features
           <br className="hidden sm:block" />
           Less feature, but it's good
@@ -26,7 +26,7 @@ export default function Feature() {
               </svg>
             </div>
             <div className="flex-grow pl-6">
-              <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
+              <h2 className="text-gray-900 text-lg title-font font-semibold mb-2">
                 Daily Noting
               </h2>
               <p className="leading-relaxed text-base">
@@ -70,7 +70,7 @@ export default function Feature() {
               </svg>
             </div>
             <div className="flex-grow pl-6">
-              <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
+              <h2 className="text-gray-900 text-lg title-font font-semibold mb-2">
                 Markdown with MDX
               </h2>
               <p className="leading-relaxed text-base">
@@ -119,7 +119,7 @@ export default function Feature() {
               </svg>
             </div>
             <div className="flex-grow pl-6">
-              <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
+              <h2 className="text-gray-900 text-lg title-font font-semibold mb-2">
                 All in local
               </h2>
               <p className="leading-relaxed text-base">
