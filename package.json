@@ -17,6 +17,7 @@
   "devDependencies": {
     "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^1.0.4",
+    "@svgr/webpack": "^5.5.0",
     "@types/react": "^17",
     "autoprefixer": "^10.3.7",
     "eslint": "^8",
