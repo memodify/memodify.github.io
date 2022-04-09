@@ -24,7 +24,7 @@ export default function Hero() {
           </p>
           <div className="flex justify-center">
             <button className="inline-flex text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg">
-              <a href="https://app.memodify.com/new" target="application">
+              <a href="https://memodify.app/new" target="application">
                 Getting Started
               </a>
             </button>
