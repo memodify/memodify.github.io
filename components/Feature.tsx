@@ -74,7 +74,7 @@ export default function Feature() {
                 Markdown with MDX
               </h2>
               <p className="leading-relaxed text-base">
-                Memodify is a note-taking application supporting
+                Memodify is a note-taking application supporting{" "}
                 <a href="https://mdxjs.com/" target="mdx">
                   MDX
                 </a>
