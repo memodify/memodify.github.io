@@ -1,6 +1,6 @@
+import Image from "next/image";
+
 export default function Hero() {
-  const url =
-    "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2970&q=80";
   return (
     <section className="text-gray-600 body-font">
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
@@ -34,11 +34,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-          <img
-            className="object-cover object-center rounded"
-            alt="hero"
-            src={url}
-          />
+          <Image src="/full-screenshot.png" width="3222px" height="1766px" />
         </div>
       </div>
     </section>
