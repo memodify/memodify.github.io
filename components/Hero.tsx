@@ -34,7 +34,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-          <Image src="/full-screenshot.png" width="3222px" height="1766px" />
+          <img src="/full-screenshot.png" width="3222px" height="1766px" />
         </div>
       </div>
     </section>
