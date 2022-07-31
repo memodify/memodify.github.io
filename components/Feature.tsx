@@ -15,11 +15,16 @@ export default function Feature() {
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
-        <h1 className="sm:text-3xl text-2xl font-bold title-font text-center text-gray-900 mb-20">
-          Features
-          <br className="hidden sm:block" />
-          Less feature, but it's good
-        </h1>
+        <div className="flex flex-col text-center w-full mb-8">
+          <h1 className="sm:text-3xl text-2xl font-bold title-font text-center text-gray-900 mb-2">
+            Features
+            <br className="hidden sm:block" />
+            Less feature, but it's good
+          </h1>
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">
+            Simple is best!
+          </p>
+        </div>
         <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
           <FeatureItem title={"Daily Noting"} icon={svgPen}>
             {featureContent}
