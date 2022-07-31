@@ -9,10 +9,10 @@ export default function Hero() {
             personally and securely
           </h1>
           <p className="mb-4 leading-relaxed">
-            Taking notes is extremely personal, private, secret and
+            Taking notes is extremely personal, private, secret, and
             confidential. Without thinking, people may accidentally write down
             things that they don't want others to see, such as passwords or the
-            amount of their total assets. Are you sure that no one can see the
+            number of their total assets. Are you sure that no one can see the
             application you are writing in?
           </p>
           <p className="mb-8 leading-relaxed">
