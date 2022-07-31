@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SVGProps } from "react";
 
 export default function Feature() {
   const featureContent = (
@@ -77,14 +78,18 @@ export default function Feature() {
   );
 }
 
+type T = SVGProps<SVGSVGElement>;
+
+const svgProps: T = {
+  xmlns: "http://www.w3.org/2000/svg",
+  className: "h-6 w-6",
+  fill: "none",
+  viewBox: "0 0 24 24",
+  stroke: "currentColor",
+};
+
 const svgPen = (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className="h-6 w-6"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
+  <svg {...svgProps}>
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -117,13 +122,7 @@ function FeatureItem({ children, title, icon }: FeatureItemProps) {
 }
 
 const svgBaloon = (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className="h-6 w-6"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
+  <svg {...svgProps}>
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
