@@ -12,6 +12,7 @@ jobs:
       url: https://www.memodify.com
     env:
       NEXT_PUBLIC_GOOGLE_ANALYTICS_MEASUREMENT_ID: ${{ secrets.GOOGLE_ANALYTICS_MEASUREMENT_ID }}
+      NEXT_PUBLIC_LIVEDEMO_URL: ${{ secrets.NEXT_PUBLIC_LIVEDEMO_URL }}
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
