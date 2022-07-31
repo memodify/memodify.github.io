@@ -3,7 +3,7 @@ export function LiveDemo() {
     process.env.NEXT_PUBLIC_LIVEDEMO_URL ??
     "http://localhost:3000/demo/editor-preview";
   return (
-    <section className="text-gray-600 body-font">
+    <section id="section-live-demo" className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-8">
           <h1
@@ -17,10 +17,10 @@ export function LiveDemo() {
               "mb-2",
             ].join(" ")}
           >
-            Live demo
+            Live Demo
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">
-            There is no plans except for free.
+            You can try power of MDX.
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
