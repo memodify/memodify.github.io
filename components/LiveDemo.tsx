@@ -3,7 +3,7 @@ export function LiveDemo() {
     process.env.NEXT_PUBLIC_LIVEDEMO_URL ??
     "http://localhost:3000/demo/editor-preview";
   return (
-    <section id="section-live-demo" className="text-gray-600 body-font">
+    <section id="live-demo" className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-8">
           <h1

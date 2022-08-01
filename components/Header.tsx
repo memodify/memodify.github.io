@@ -9,13 +9,13 @@ export default function Header() {
           <span className="ml-3 text-xl">Memodify</span>
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <a className="mr-5 hover:text-gray-900" href="#section-feature">
+          <a className="mr-5 hover:text-gray-900" href="#feature">
             Feature
           </a>
-          <a className="mr-5 hover:text-gray-900" href="#section-live-demo">
+          <a className="mr-5 hover:text-gray-900" href="#live-demo">
             Live Demo
           </a>
-          <a className="mr-5 hover:text-gray-900" href="#section-pricing">
+          <a className="mr-5 hover:text-gray-900" href="#pricing">
             Pricing
           </a>
           <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">

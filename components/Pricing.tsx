@@ -1,7 +1,7 @@
 export default function Pricing() {
   return (
     <section
-      id="section-pricing"
+      id="pricing"
       className="text-gray-600 body-font overflow-hidden"
     >
       <div className="container px-5 py-24 mx-auto">

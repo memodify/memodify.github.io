@@ -13,7 +13,7 @@ export default function Feature() {
   );
 
   return (
-    <section id="section-feature" className="text-gray-600 body-font">
+    <section id="feature" className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-8">
           <h1 className="sm:text-3xl text-2xl font-bold title-font text-center text-gray-900 mb-2">
