@@ -31,6 +31,10 @@ export function LiveDemo() {
             style={{ border: "none", margin: 0, padding: 0 }}
           />
         </div>
+        <p className="text-gray-400 text-right">
+          If you cannot see the demo, please accept 3rd party cookie on your
+          browser settings.
+        </p>
       </div>
     </section>
   );
