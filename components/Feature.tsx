@@ -77,6 +77,16 @@ export default function Feature() {
               <img src="/theme.png" width="3222px" height="1766px" />
             </div>
           </FeatureItem>
+          <FeatureItem title={"Label"} icon={svgTag}>
+            <div className="flex-grow pl-6">
+              <p className="leading-relaxed text-base"></p>
+              <img
+                width={"300px"}
+                src="/label.png"
+                style={{ boxShadow: "2px 2px 8px lightgray" }}
+              />
+            </div>
+          </FeatureItem>
         </div>
       </div>
     </section>
@@ -201,6 +211,23 @@ const svgSparkle = (
       strokeLinecap="round"
       strokeLinejoin="round"
       d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+    />
+  </svg>
+);
+
+const svgTag = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-6 w-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    stroke-width="2"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"
     />
   </svg>
 );
