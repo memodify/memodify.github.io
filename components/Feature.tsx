@@ -1,18 +1,107 @@
-import Image from "next/image";
 import { SVGProps } from "react";
 
 export default function Feature() {
   return (
+    <>
+      <FeaturesItems />
+    </>
+  );
+}
+
+type FeatureAProps = {
+  imagePath: string;
+  title: string;
+  text: string | JSX.Element;
+};
+
+function FeatureRight({ title, text, imagePath }: FeatureAProps) {
+  return (
+    <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+      <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+        <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
+          {title}
+        </h2>
+        <p className="leading-relaxed text-base">{text}</p>
+        {/* <a className="mt-3 text-indigo-500 inline-flex items-center">
+          Learn More {svgRightArrow}
+        </a> */}
+      </div>
+      <div className="w-2/5 sm:order-none order-first sm:h-32 h-20 sm:ml-10 inline-flex items-center flex-shrink-0">
+        <img src={imagePath} />
+      </div>
+    </div>
+  );
+}
+
+function FeatureLeft({ imagePath, title, text }: FeatureAProps) {
+  return (
+    <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+      <div className="w-2/5 sm:h-32 h-20 sm:mr-10 inline-flex items-center justify-center flex-shrink-0">
+        <img src={imagePath} />
+      </div>
+      <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+        <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
+          {title}
+        </h2>
+        <p className="leading-relaxed text-base">{text}</p>
+        {/* <a className="mt-3 text-indigo-500 inline-flex items-center">
+          Learn More {svgRightArrow}
+        </a> */}
+      </div>
+    </div>
+  );
+}
+
+function FeaturesItems() {
+  return (
     <section id="feature" className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-col text-center w-full mb-8">
-          <h1 className="sm:text-3xl text-2xl font-bold title-font text-center text-gray-900 mb-2">
-            Features
-            <br className="hidden sm:block" />
-            Less feature, but it's good
+        <div className="flex flex-col text-center w-full mb-16">
+          <h1 className="sm:text-4xl text-4xl font-bold title-font text-center text-gray-900 mb-2">
+            Feature
           </h1>
+          <h2 className="sm:text-2xl text-2xl font-bold title-font text-center text-gray-900 mb-2 mt-8">
+            Not rich features, but it's good
+          </h2>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">
             Simple is best!
+          </p>
+        </div>
+        <FeatureLeft
+          {...{
+            imagePath: "/with-command-palette.png",
+            title: "Command Palette",
+            text: "Command palette is an awesome UI. You can quickly invoke the palette whenever you want. In addition, a note palette is supported.",
+          }}
+        />
+        <FeatureRight
+          {...{
+            title: "Dark mode",
+            text: "Dark mode is supported for sure. You can change the mode whenever you want throught the command palette.",
+            imagePath: "/dark-mode.png",
+          }}
+        />
+        <FeatureLeft
+          imagePath="/mdx.png"
+          title="Power of MDX"
+          text={
+            <>
+              Memodify is a note-taking application supporting{" "}
+              <a href="https://mdxjs.com/" target="mdx">
+                MDX
+              </a>
+              . "MDX is an authorable format that lets you seamlessly write JSX
+              in your Markdown documents." You can see how it's rendered with
+              live preview. (Experimental)
+            </>
+          }
+        />
+        <div className="flex flex-col text-center w-full mb-8">
+          <h2 className="sm:text-2xl text-2xl font-bold title-font text-center text-gray-900 mb-2 mt-8">
+            More features
+          </h2>
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">
+            There are some features you are familiar with.
           </p>
         </div>
         <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
@@ -25,70 +114,41 @@ export default function Feature() {
               (In progress)
             </p>
           </FeatureItem>
-          <FeatureItem title={"Markdown with MDX"} icon={svgBaloon}>
-            <div>
-              <p className="leading-relaxed text-base">
-                Memodify is a note-taking application supporting{" "}
-                <a href="https://mdxjs.com/" target="mdx">
-                  MDX
-                </a>
-                .
-              </p>
-              <blockquote className="mt-4">
-                "MDX is an authorable format that lets you seamlessly write JSX
-                in your Markdown documents."
-              </blockquote>
-              <p>(Experimental)</p>
-            </div>
-          </FeatureItem>
           <FeatureItem title={"All in local"} icon={svgInbox}>
             <p className="leading-relaxed text-base">
               All your data is in your local machine. No your data go through
               the Internet unintentionally. No sync, no share and no publish.
+              Memodify never sends your data to any remote hosts without your
+              directions.
             </p>
           </FeatureItem>
-          <FeatureItem title={"Dark mode"} icon={svgLight}>
-            <>
-              <p className="leading-relaxed text-base">
-                Dark mode is supported for sure.
-              </p>
-              <img src="/dark-mode.png" width="3222px" height="1766px" />
-            </>
-          </FeatureItem>
-          <FeatureItem title={"Command palette"} icon={svgLightening}>
-            <>
-              <div className="flex-grow pl-6">
-                <p className="leading-relaxed text-base">
-                  Command palette is useful and modern user interface.
-                </p>
-                <img
-                  src="/with-command-palette.png"
-                  width="3222px"
-                  height="1766px"
-                />
-              </div>
-            </>
-          </FeatureItem>
           <FeatureItem title={"Theme"} icon={svgSparkle}>
-            <div className="flex-grow pl-6">
+            <>
               <p className="leading-relaxed text-base">
-                Several color schemes are pre-defined.
+                Several color schemes are pre-defined. You can change your
+                active theme anytime.
               </p>
-              <img src="/theme.png" width="3222px" height="1766px" />
-            </div>
+              <img className="mt-2" src="/theme.png" />
+            </>
           </FeatureItem>
-          <FeatureItem title={"Label"} icon={svgTag}>
-            <div className="flex-grow pl-6">
+          <FeatureItem title={"Organize notes"} icon={svgTag}>
+            <>
               <p className="leading-relaxed text-base">
-                Label is a popular function as metadata.
+                Easily organize your notes with label which is a popular
+                function as metadata. You can star, like, complete and trash
+                notes, then you can filter with the statues.
               </p>
-              <img
-                className="mt-2"
-                width={"280px"}
-                src="/label.png"
-                style={{ boxShadow: "2px 2px 8px lightgray" }}
-              />
-            </div>
+              <img className="mt-2" src="/label-status.png" />
+            </>
+          </FeatureItem>
+          <FeatureItem title={"Zen mode"} icon={svgLightening}>
+            <p>TBD</p>
+          </FeatureItem>
+          <FeatureItem title={"Attach images by drag & drop"} icon={svgBaloon}>
+            <p>TBD</p>
+          </FeatureItem>
+          <FeatureItem title={"GitHub Flavored Markdown"} icon={svgLight}>
+            <p>TBD</p>
           </FeatureItem>
         </div>
       </div>
@@ -125,7 +185,7 @@ interface FeatureItemProps {
 
 function FeatureItem({ children, title, icon }: FeatureItemProps) {
   return (
-    <div className="p-4 md:w-1/3 flex">
+    <div className="p-4 md:w-1/2 lg:w-1/3 flex">
       <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 mb-4 flex-shrink-0">
         {icon}
       </div>
@@ -232,5 +292,64 @@ const svgTag = (
       stroke-linejoin="round"
       d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"
     />
+  </svg>
+);
+
+const svgPulse = (
+  <svg
+    fill="none"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    className="sm:w-16 sm:h-16 w-10 h-10"
+    viewBox="0 0 24 24"
+  >
+    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+  </svg>
+);
+
+const svgRightArrow = (
+  <svg
+    fill="none"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    className="w-4 h-4 ml-2"
+    viewBox="0 0 24 24"
+  >
+    <path d="M5 12h14M12 5l7 7-7 7"></path>
+  </svg>
+);
+
+const svgScissors = (
+  <svg
+    fill="none"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    className="sm:w-16 sm:h-16 w-10 h-10"
+    viewBox="0 0 24 24"
+  >
+    <circle cx="6" cy="6" r="3"></circle>
+    <circle cx="6" cy="18" r="3"></circle>
+    <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+  </svg>
+);
+
+const svgPerson = (
+  <svg
+    fill="none"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    className="sm:w-16 sm:h-16 w-10 h-10"
+    viewBox="0 0 24 24"
+  >
+    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+    <circle cx="12" cy="7" r="4"></circle>
   </svg>
 );
