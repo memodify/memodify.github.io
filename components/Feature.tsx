@@ -49,7 +49,9 @@ export default function Feature() {
           </FeatureItem>
           <FeatureItem title={"Dark mode"} icon={svgLight}>
             <>
-              <p className="leading-relaxed text-base">For sure</p>
+              <p className="leading-relaxed text-base">
+                Dark mode is supported for sure.
+              </p>
               <img src="/dark-mode.png" width="3222px" height="1766px" />
             </>
           </FeatureItem>
@@ -69,15 +71,20 @@ export default function Feature() {
           </FeatureItem>
           <FeatureItem title={"Theme"} icon={svgSparkle}>
             <div className="flex-grow pl-6">
-              <p className="leading-relaxed text-base"></p>
+              <p className="leading-relaxed text-base">
+                Several color schemes are pre-defined.
+              </p>
               <img src="/theme.png" width="3222px" height="1766px" />
             </div>
           </FeatureItem>
           <FeatureItem title={"Label"} icon={svgTag}>
             <div className="flex-grow pl-6">
-              <p className="leading-relaxed text-base"></p>
+              <p className="leading-relaxed text-base">
+                Label is a popular function as metadata.
+              </p>
               <img
-                width={"300px"}
+                className="mt-2"
+                width={"280px"}
                 src="/label.png"
                 style={{ boxShadow: "2px 2px 8px lightgray" }}
               />
