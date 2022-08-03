@@ -2,16 +2,6 @@ import Image from "next/image";
 import { SVGProps } from "react";
 
 export default function Feature() {
-  const featureContent = (
-    <p className="leading-relaxed text-base">
-      You can continue editing a single note so that you don't need creating a
-      new file, thinking filename or title, etc. It's automatically categorized,
-      classified and grouped.
-      <br />
-      (In progress)
-    </p>
-  );
-
   return (
     <section id="feature" className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
@@ -27,7 +17,13 @@ export default function Feature() {
         </div>
         <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
           <FeatureItem title={"Daily Noting"} icon={svgPen}>
-            {featureContent}
+            <p className="leading-relaxed text-base">
+              You can continue editing a single note so that you don't need
+              creating a new file, thinking filename or title, etc. It's
+              automatically categorized, classified and grouped.
+              <br />
+              (In progress)
+            </p>
           </FeatureItem>
           <FeatureItem title={"Markdown with MDX"} icon={svgBaloon}>
             <div>
