@@ -27,7 +27,7 @@ export default function Header() {
               href="//memodify.app/"
               target="application"
             >
-              Web Appplication
+              In-browser
             </a>
           </button>
         </nav>

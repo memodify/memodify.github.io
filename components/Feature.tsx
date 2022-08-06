@@ -71,13 +71,12 @@ export default function Feature() {
         <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
           <FeatureItem title={"Export and import"} icon={svgLight}>
             <p>
-              You can export all your notes as a plain JSON file even for
-              Memodify{" "}
+              You can export all your notes as a plain JSON file even for{" "}
               <a href="//memodify.app" target="application">
-                web application
-              </a>
-              . You can stop using Memodify anytime and transfer your data
-              somewhere.
+                In-browser
+              </a>{" "}
+              Memodify. You can stop using Memodify anytime and transfer your
+              data somewhere.
               <br /> Importing works, too, certainly.
             </p>
           </FeatureItem>
@@ -111,8 +110,8 @@ export default function Feature() {
               <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">
                 GitHub Flavored Markdown
               </a>{" "}
-              so called GFM. You can write listing, tables, quoting, etc as
-              GitHub comments though it's a subset.
+              so called GFM. You can write listing, tables, quoting, Math
+              expression, etc as GitHub comments though it's a subset.
             </p>
           </FeatureItem>
           <FeatureItem title={"Zen mode"} icon={svgLightening}>
