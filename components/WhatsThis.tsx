@@ -10,19 +10,19 @@ export default function Feature() {
         <div className="flex flex-col text-center">
           <p>Memodify is a Markdown editor.</p>
           <ul className="mt-4">
-            <li>
+            <li className="mt-4">
               Powerful preview with{" "}
               <a className="underline decoration-sky-500">MDX</a>
             </li>
-            <li>
+            <li className="mt-4">
               <a className="underline decoration-green-500">Developer</a>{" "}
               friendly
             </li>
-            <li>
+            <li className="mt-4">
               <a className="underline decoration-orange-500">Privacy</a>
               -considered
             </li>
-            <li>
+            <li className="mt-4">
               <a className="underline decoration-pink-500">Standalone</a> &{" "}
               <a className="underline decoration-yellow-400">In-brower</a>
             </li>
