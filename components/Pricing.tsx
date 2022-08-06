@@ -10,7 +10,7 @@ export default function Pricing() {
             There is no plans except for free.
           </p>
         </div>
-        <div className="flex flex-wrap -m-4">
+        <div className="flex flex-col items-center">
           <PricingCard
             {...{
               subheader: "Everything",
@@ -18,17 +18,20 @@ export default function Pricing() {
               footer: "You can use Memodify for free.",
             }}
           >
-            <PricingItem>Full features</PricingItem>
+            <>
+              <PricingItem>Full features</PricingItem>
+              <PricingItem>Standalone & In-browser</PricingItem>
+            </>
           </PricingCard>
           {/* <PricingCard
-              {...{
-                subheader: "Or",
-                header: "Donate",
-                footer: "Your donations are welcome.",
-              }}
-            >
-              <PricingItem>Full features</PricingItem>
-            </PricingCard> */}
+            {...{
+              subheader: "Welcome",
+              header: "Donate",
+              footer: "I'm preparing how to donate.",
+            }}
+          >
+            <PricingItem>TBD</PricingItem>
+          </PricingCard> */}
         </div>
       </div>
     </section>
