@@ -9,7 +9,7 @@ export default function Feature() {
             Feature
           </h1>
           <h2 className="sm:text-2xl text-2xl font-bold title-font text-center text-gray-900 mb-2 mt-8">
-            Not rich features, but it's good
+            Not rich features, but enough
           </h2>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">
             Simple is best!
@@ -44,6 +44,22 @@ export default function Feature() {
             </>
           }
         />
+        <FeatureRight
+          imagePath="/theme.png"
+          title="Theme"
+          text={
+            "Several color schemes are pre-defined. You can change your active theme anytime."
+          }
+        />
+        <FeatureLeft
+          imagePath="/label-status.png"
+          title="Organize notes"
+          text={
+            "Easily organize your notes with label which is a popular function as metadata. You can star, like, complete and trash notes, then you can filter with the statues."
+          }
+        />
+
+        {/* ---- More Features ---- */}
         <div className="flex flex-col text-center w-full mb-8">
           <h2 className="sm:text-2xl text-2xl font-bold title-font text-center text-gray-900 mb-2 mt-8">
             More features
@@ -53,6 +69,18 @@ export default function Feature() {
           </p>
         </div>
         <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+          <FeatureItem title={"Export and import"} icon={svgLight}>
+            <p>
+              You can export all your notes as a plain JSON file even for
+              Memodify{" "}
+              <a href="//memodify.app" target="application">
+                web application
+              </a>
+              . You can stop using Memodify anytime and transfer your data
+              somewhere.
+              <br /> Importing works, too, certainly.
+            </p>
+          </FeatureItem>
           <FeatureItem title={"Daily Noting"} icon={svgPen}>
             <p className="leading-relaxed text-base">
               You can continue editing a single note so that you don't need
@@ -70,33 +98,29 @@ export default function Feature() {
               directions.
             </p>
           </FeatureItem>
-          <FeatureItem title={"Theme"} icon={svgSparkle}>
-            <>
-              <p className="leading-relaxed text-base">
-                Several color schemes are pre-defined. You can change your
-                active theme anytime.
-              </p>
-              <img className="mt-2" src="/theme.png" />
-            </>
+          <FeatureItem title={"Images by DnD"} icon={svgBaloon}>
+            <p>
+              You can drag & drop images onto notes of Memodify to attach them.
+              They are referrable in the note. The attached images are exported
+              with notes to a JSON in base64.
+            </p>
           </FeatureItem>
-          <FeatureItem title={"Organize notes"} icon={svgTag}>
-            <>
-              <p className="leading-relaxed text-base">
-                Easily organize your notes with label which is a popular
-                function as metadata. You can star, like, complete and trash
-                notes, then you can filter with the statues.
-              </p>
-              <img className="mt-2" src="/label-status.png" />
-            </>
+          <FeatureItem title={"GFM"} icon={svgLight}>
+            <p>
+              Memodify supports{" "}
+              <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">
+                GitHub Flavored Markdown
+              </a>{" "}
+              so called GFM. You can write listing, tables, quoting, etc as
+              GitHub comments though it's a subset.
+            </p>
           </FeatureItem>
           <FeatureItem title={"Zen mode"} icon={svgLightening}>
-            <p>TBD</p>
-          </FeatureItem>
-          <FeatureItem title={"Attach images by drag & drop"} icon={svgBaloon}>
-            <p>TBD</p>
-          </FeatureItem>
-          <FeatureItem title={"GitHub Flavored Markdown"} icon={svgLight}>
-            <p>TBD</p>
+            <p>
+              "Zen" mode allows you to concentrate on a task with a simplified
+              UI. In memodify The simplest layout of Memodify consists of a few
+              text fields.
+            </p>
           </FeatureItem>
         </div>
       </div>
