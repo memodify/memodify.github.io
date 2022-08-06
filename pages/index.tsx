@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import { LiveDemo } from "../components/LiveDemo";
 import Pricing from "../components/Pricing";
+import WhatsThis from "../components/WhatsThis";
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +13,7 @@ const Home: NextPage = () => {
       <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       <Header />
       <Hero />
+      <WhatsThis />
       <Feature />
       <LiveDemo />
       <Pricing />
