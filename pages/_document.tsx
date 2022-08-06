@@ -15,6 +15,21 @@ class MyDocument extends Document {
         <Head>
           {/* https://www.webcreatorbox.com/tech/svg-favicon */}
           <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:title"
+            content="Memodify - Simple Markdown Editor"
+          />
+          <meta
+            property="og:description"
+            content="Create notes in Markdown, which are for everything personally."
+          />
+          <meta property="og:url" content="https://memodify.com/" />
+          <meta
+            property="og:image"
+            content="https://memodify.com/full-screenshot.png"
+          />
+          <meta property="og:image:alt" content="Memodify" />
         </Head>
         <body>
           <Main />
