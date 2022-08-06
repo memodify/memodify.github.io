@@ -2,58 +2,6 @@ import { SVGProps } from "react";
 
 export default function Feature() {
   return (
-    <>
-      <FeaturesItems />
-    </>
-  );
-}
-
-type FeatureAProps = {
-  imagePath: string;
-  title: string;
-  text: string | JSX.Element;
-};
-
-function FeatureRight({ title, text, imagePath }: FeatureAProps) {
-  return (
-    <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-      <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-        <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
-          {title}
-        </h2>
-        <p className="leading-relaxed text-base">{text}</p>
-        {/* <a className="mt-3 text-indigo-500 inline-flex items-center">
-          Learn More {svgRightArrow}
-        </a> */}
-      </div>
-      <div className="w-2/5 sm:order-none order-first sm:h-32 h-20 sm:ml-10 inline-flex items-center flex-shrink-0">
-        <img src={imagePath} />
-      </div>
-    </div>
-  );
-}
-
-function FeatureLeft({ imagePath, title, text }: FeatureAProps) {
-  return (
-    <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-      <div className="w-2/5 sm:h-32 h-20 sm:mr-10 inline-flex items-center justify-center flex-shrink-0">
-        <img src={imagePath} />
-      </div>
-      <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-        <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
-          {title}
-        </h2>
-        <p className="leading-relaxed text-base">{text}</p>
-        {/* <a className="mt-3 text-indigo-500 inline-flex items-center">
-          Learn More {svgRightArrow}
-        </a> */}
-      </div>
-    </div>
-  );
-}
-
-function FeaturesItems() {
-  return (
     <section id="feature" className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-16">
@@ -181,6 +129,50 @@ interface FeatureItemProps {
   children: JSX.Element;
   title: string;
   icon: JSX.Element;
+}
+
+type FeatureAProps = {
+  imagePath: string;
+  title: string;
+  text: string | JSX.Element;
+};
+
+function FeatureRight({ title, text, imagePath }: FeatureAProps) {
+  return (
+    <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+      <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+        <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
+          {title}
+        </h2>
+        <p className="leading-relaxed text-base">{text}</p>
+        {/* <a className="mt-3 text-indigo-500 inline-flex items-center">
+          Learn More {svgRightArrow}
+        </a> */}
+      </div>
+      <div className="w-2/5 sm:order-none order-first sm:h-32 h-20 sm:ml-10 inline-flex items-center flex-shrink-0">
+        <img src={imagePath} />
+      </div>
+    </div>
+  );
+}
+
+function FeatureLeft({ imagePath, title, text }: FeatureAProps) {
+  return (
+    <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+      <div className="w-2/5 sm:h-32 h-20 sm:mr-10 inline-flex items-center justify-center flex-shrink-0">
+        <img src={imagePath} />
+      </div>
+      <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+        <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
+          {title}
+        </h2>
+        <p className="leading-relaxed text-base">{text}</p>
+        {/* <a className="mt-3 text-indigo-500 inline-flex items-center">
+          Learn More {svgRightArrow}
+        </a> */}
+      </div>
+    </div>
+  );
 }
 
 function FeatureItem({ children, title, icon }: FeatureItemProps) {
