@@ -232,7 +232,7 @@ const svgLight = (
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
-    stroke-width="2"
+    strokeWidth="2"
   >
     <path
       strokeLinecap="round"
@@ -266,7 +266,7 @@ const svgLightening = (
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
-    stroke-width="2"
+    strokeWidth="2"
   >
     <path
       strokeLinecap="round"
@@ -300,7 +300,7 @@ const svgTag = (
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
-    stroke-width="2"
+    strokeWidth="2"
   >
     <path
       strokeLinecap="round"
@@ -316,7 +316,7 @@ const svgPulse = (
     stroke="currentColor"
     strokeLinecap="round"
     strokeLinejoin="round"
-    stroke-width="2"
+    strokeWidth="2"
     className="sm:w-16 sm:h-16 w-10 h-10"
     viewBox="0 0 24 24"
   >
@@ -330,7 +330,7 @@ const svgRightArrow = (
     stroke="currentColor"
     strokeLinecap="round"
     strokeLinejoin="round"
-    stroke-width="2"
+    strokeWidth="2"
     className="w-4 h-4 ml-2"
     viewBox="0 0 24 24"
   >
@@ -344,7 +344,7 @@ const svgScissors = (
     stroke="currentColor"
     strokeLinecap="round"
     strokeLinejoin="round"
-    stroke-width="2"
+    strokeWidth="2"
     className="sm:w-16 sm:h-16 w-10 h-10"
     viewBox="0 0 24 24"
   >
@@ -360,7 +360,7 @@ const svgPerson = (
     stroke="currentColor"
     strokeLinecap="round"
     strokeLinejoin="round"
-    stroke-width="2"
+    strokeWidth="2"
     className="sm:w-16 sm:h-16 w-10 h-10"
     viewBox="0 0 24 24"
   >
