@@ -12,21 +12,21 @@ export default function Header() {
           </a>
         </Link>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <a className="mr-5 hover:text-gray-900" href="/#whats-this">
-            What's this
-          </a>
-          <a className="mr-5 hover:text-gray-900" href="/#feature">
-            Feature
-          </a>
-          <a className="mr-5 hover:text-gray-900" href="/#live-demo">
-            Live Demo
-          </a>
+          <Link href="/#whats-this">
+            <a className="mr-5 hover:text-gray-900">What's this</a>
+          </Link>
+          <Link href="/#feature">
+            <a className="mr-5 hover:text-gray-900">Feature</a>
+          </Link>
+          <Link href="/#live-demo">
+            <a className="mr-5 hover:text-gray-900">Live Demo</a>
+          </Link>
           <Link href="/docs">
             <a className="mr-5">Docs</a>
           </Link>
-          <a className="mr-5 hover:text-gray-900" href="/#pricing">
-            Pricing
-          </a>
+          <Link href="/#pricing">
+            <a className="mr-5 hover:text-gray-900">Pricing</a>
+          </Link>
           <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 hover:drop-shadow-md">
             <a
               className="hover:text-gray-900 whitespace-nowrap"

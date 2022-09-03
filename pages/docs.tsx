@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Link from "next/link";
 import Header from "../components/Header";
 
 const Docs: NextPage = () => {
@@ -9,13 +10,19 @@ const Docs: NextPage = () => {
         <div className="w-1/5">
           <ul className="flex flex-col">
             <li>
-              <a href="/docs#getting-started">Getting Started</a>
+              <Link href="/docs#getting-started">
+                <a>Getting Started</a>
+              </Link>
             </li>
             <li>
-              <a href="/docs#settings">Settings</a>
+              <Link href="/docs#settings">
+                <a>Settings</a>
+              </Link>
             </li>
             <li>
-              <a href="/docs#advanced">Advanced</a>
+              <Link href="/docs#advanced">
+                <a>Advanced</a>
+              </Link>
             </li>
           </ul>
         </div>
