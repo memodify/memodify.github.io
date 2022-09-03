@@ -1,11 +1,21 @@
 import type { NextPage } from "next";
 import Link from "next/link";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 const Docs: NextPage = () => {
   return (
     <>
       <Header />
+      <Main />
+      <Footer />
+    </>
+  );
+};
+
+const Main: NextPage = () => {
+  return (
+    <>
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row text-gray-700">
         <div className="w-1/5">
           <ul className="flex flex-col">
