@@ -15,7 +15,7 @@ export default function Footer() {
           >
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
           </svg> */}
-          <span className="ml-3 text-xl">Memodify</span>
+          <p className="ml-3 text-xl">Memodify</p>
         </a>
         <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
           © 2022 Tomotaka Sakuma —
@@ -28,7 +28,7 @@ export default function Footer() {
             @tmtk75
           </a>
         </p>
-        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <p className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           <a
             className="text-gray-500"
             href="https://www.facebook.com/tomotaka.sakuma"
@@ -96,7 +96,7 @@ export default function Footer() {
               <circle cx="4" cy="4" r="2" stroke="none"></circle>
             </svg>
           </a> */}
-        </span>
+        </p>
       </div>
     </footer>
   );

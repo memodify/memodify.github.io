@@ -65,8 +65,8 @@ function PricingCard(props: PricingCardProps) {
 
 function PricingItem({ children }: { children: string | JSX.Element }) {
   return (
-    <p className="flex items-center text-gray-600 mb-2">
-      <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
+    <li className="flex items-center text-gray-600 mb-2">
+      <p className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
         <svg
           fill="none"
           stroke="currentColor"
@@ -78,8 +78,8 @@ function PricingItem({ children }: { children: string | JSX.Element }) {
         >
           <path d="M20 6L9 17l-5-5"></path>
         </svg>
-      </span>
+      </p>
       {children}
-    </p>
+    </li>
   );
 }
