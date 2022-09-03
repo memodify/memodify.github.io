@@ -19,14 +19,14 @@ export default function Hero() {
             There are no plug-ins, nothing. You can write whatever you want.
           </p>
           <div className="flex justify-center">
-            <button className="inline-flex text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg">
+            <button className="mr-1 inline-flex text-yellow-500 bg-yellow-100 border-0 py-2 px-6 focus:outline-none rounded text-lg items-center">
+              Download <p className="text-xs">coming soon</p>
+            </button>
+            <button className="inline-flex text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-500 hover:drop-shadow-md rounded text-lg">
               <a href="//memodify.app/" target="application">
-                Getting Started
+                In-browser
               </a>
             </button>
-            {/* <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
-              Button
-            </button> */}
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
