@@ -14,7 +14,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           {/* https://www.webcreatorbox.com/tech/svg-favicon */}
-          <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+          <link rel="icon" href="/favicon256x256.svg" type="image/svg+xml" />
           <meta property="og:type" content="website" />
           <meta
             property="og:title"
