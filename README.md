@@ -1,4 +1,6 @@
 # What's this?
+<img width="64" src="https://www.memodify.com/favicon256x256.svg" />
+
 Memodify is a markdown (MDX) editor which has minimal features.  
 Please visit [memodify.com](https://memodify.com/)
 
