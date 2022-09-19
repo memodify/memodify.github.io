@@ -2,8 +2,7 @@
 Memodify is a markdown (MDX) editor which has minimal features.  
 Please visit [memodify.com](https://memodify.com/)
 
-<img width="48%" src="https://www.memodify.com/full-screenshot.png" />
-<img width="48%" src="https://www.memodify.com/dark-mode.png" />
+<img width="48%" src="https://www.memodify.com/full-screenshot.png" /> <img width="48%" src="https://www.memodify.com/dark-mode.png" />
 
 * Live demo: <https://www.memodify.com/#live-demo>
 * In-browser: <https://memodify.app/>
