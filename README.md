@@ -1,8 +1,8 @@
 # What's this?
 <img width="64" src="https://www.memodify.com/favicon256x256.svg" />
 
-Memodify is a markdown (MDX) editor which has minimal features.  
-Please visit [memodify.com](https://memodify.com/)
+Memodify is a markdown (MDX) editor which has minimal but modern features.  
+Please visit [memodify.com](https://memodify.com/) to know memodify.
 
 <img width="48%" src="https://www.memodify.com/full-screenshot.png" /> <img width="48%" src="https://www.memodify.com/dark-mode.png" />
 
@@ -18,3 +18,4 @@ There are some .zip archives.
 * macos x64, arm64
 * windows x64
 * linux x64
+
