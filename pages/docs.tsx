@@ -20,31 +20,23 @@ const Main: NextPage = () => {
         <div className="w-1/5">
           <ul className="flex flex-col">
             <li className="mb-3">
-              <Link href="/docs#getting-started">
-                <a>Getting Started</a>
-              </Link>
+              <Link href="/docs#getting-started">Getting Started</Link>
             </li>
             <li className="mb-3">
-              <Link href="/docs#settings">
-                <a>Feature</a>
-              </Link>
+              <Link href="/docs#settings">Feature</Link>
               <ul className="ml-3">
                 <li>
                   <Link href="/docs#feature_command-palette">
-                    <a>Command Palette</a>
+                    Command Palette
                   </Link>
                 </li>
               </ul>
             </li>
             <li className="mb-3">
-              <Link href="/docs#settings">
-                <a>Settings</a>
-              </Link>
+              <Link href="/docs#settings">Settings</Link>
             </li>
             <li className="mb-3">
-              <Link href="/docs#advanced">
-                <a>Advanced</a>
-              </Link>
+              <Link href="/docs#advanced">Advanced</Link>
             </li>
           </ul>
         </div>

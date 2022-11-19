@@ -1,3 +1,4 @@
+// @ts-check
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
@@ -14,5 +15,9 @@ module.exports = {
       use: ["@svgr/webpack"],
     });
     return config;
+  },
+
+  experimental: {
+    appDir: true,
   },
 };
