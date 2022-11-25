@@ -18,7 +18,7 @@ const Main: NextPage = () => {
     <>
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row text-gray-700">
         <div className="w-1/5">
-          <ul className="flex flex-col">
+          <ul className="flex flex-col" style={{ position: "sticky", top: 0 }}>
             <li className="mb-3">
               <Link href="/docs#getting-started">Getting Started</Link>
             </li>
