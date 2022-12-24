@@ -1,8 +1,8 @@
-import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import "tailwindcss/tailwind.css";
 import { useEffect } from "react";
+import "tailwindcss/tailwind.css";
 import { setupGA, useTracking } from "../lib/ga";
+import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const id = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_MEASUREMENT_ID;

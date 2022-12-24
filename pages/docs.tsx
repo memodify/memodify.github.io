@@ -1,19 +1,20 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Foobar from "../contents/feature-list.mdx";
 
-const Docs: NextPage = () => {
+const Docs: NextPage<Props> = (props) => {
   return (
     <>
       <Header />
-      <Main />
+      <Main {...props} />
       <Footer />
     </>
   );
 };
 
-const Main: NextPage = () => {
+const Main: NextPage<Props> = (props) => {
   return (
     <>
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row text-gray-700">
@@ -26,7 +27,7 @@ const Main: NextPage = () => {
               <Link href="/docs#settings">Feature</Link>
               <ul className="ml-3">
                 <li>
-                  <Link href="/docs#feature_command-palette">
+                  <Link href="/docs#remarkable-features_command-palette">
                     Command Palette
                   </Link>
                 </li>
@@ -38,7 +39,13 @@ const Main: NextPage = () => {
             <li className="mb-3">
               <Link href="/docs#advanced">Advanced</Link>
             </li>
+            <li className="mb-3">
+              <Link href="/docs#feature-list">Feature List</Link>
+            </li>
           </ul>
+          <div className="text-xs">
+            built at {props.meta.builtAt.toISOString()}
+          </div>
         </div>
         <div className="w-4/5">
           <section className="">
@@ -63,11 +70,11 @@ const Main: NextPage = () => {
           ))} */}
 
           <section className="pt-24">
-            <h1 id="feature" className="mb-4 text-4xl font-bold">
-              Feature
+            <h1 id="remarkable-features" className="mb-4 text-4xl font-bold">
+              Remarkable Features
             </h1>
             <h2
-              id="feature_command-palette"
+              id="remarkable-features_command-palette"
               className="pb-4 text-3xl font-bold"
             >
               Command Palette
@@ -88,6 +95,10 @@ const Main: NextPage = () => {
             </h1>
             <p>TBD</p>
           </section>
+
+          <section className="pt-24 feature-list prose">
+            <Foobar />
+          </section>
         </div>
       </div>
     </>
@@ -95,3 +106,19 @@ const Main: NextPage = () => {
 };
 
 export default Docs;
+
+type Props = {
+  meta: {
+    builtAt: Date;
+  };
+};
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  return {
+    props: {
+      meta: {
+        builtAt: new Date(),
+      },
+    },
+  };
+};
