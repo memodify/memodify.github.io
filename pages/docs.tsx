@@ -52,24 +52,19 @@ const Main: NextPage<Props> = (props) => {
           </div>
         </div>
         <div className="w-4/5">
-          <section className="">
-            <GettingStarted />
-          </section>
-
-          <section className="pt-24">
-            <RemarkableFeatures />
-          </section>
-          <section className="pt-24">
-            <Settings />
-          </section>
-
-          <section className="pt-24">
-            <Advanced />
-          </section>
-
-          <section className="pt-24 feature-list prose">
-            <FeatureList />
-          </section>
+          {(
+            [
+              [<GettingStarted />],
+              [<RemarkableFeatures />],
+              [<Settings />],
+              [<Advanced />],
+              [<FeatureList />],
+            ] as const
+          ).map((e, idx) => (
+            <section className={[idx > 0 ? "pt-24" : null, "prose"].join(" ")}>
+              {e}
+            </section>
+          ))}
         </div>
       </div>
     </>
