@@ -7,7 +7,8 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "serve": "python -m http.server --directory out ${PORT-8000}"
   },
   "dependencies": {
     "next": "^13",
