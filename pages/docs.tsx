@@ -2,7 +2,11 @@ import type { GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import Foobar from "../contents/feature-list.mdx";
+import FeatureList from "../contents/feature-list.mdx";
+import RemarkableFeatures from "../contents/remarkable-features.mdx";
+import GettingStarted from "../contents/getting-started.mdx";
+import Settings from "../contents/settings.mdx";
+import Advanced from "../contents/advanced.mdx";
 
 const Docs: NextPage<Props> = (props) => {
   return (
@@ -49,55 +53,22 @@ const Main: NextPage<Props> = (props) => {
         </div>
         <div className="w-4/5">
           <section className="">
-            <h1 id="getting-started" className="mb-4 text-4xl font-bold">
-              Getting Started
-            </h1>
-            <p>You can quickly get started with the in-broswer memodify.</p>
-            <p>
-              Please visit{" "}
-              <a
-                href="//memodify.app/"
-                target="application"
-                className="bg-gray-100 p-1 rounded text-base hover:drop-shadow-sm hover:bg-gray-200"
-              >
-                https://memodify.app
-              </a>
-              .
-            </p>
-          </section>
-          {/* {Array.from(new Array(0), (e, i) => i).map((e) => (
-            <p>{e}</p>
-          ))} */}
-
-          <section className="pt-24">
-            <h1 id="remarkable-features" className="mb-4 text-4xl font-bold">
-              Remarkable Features
-            </h1>
-            <h2
-              id="remarkable-features_command-palette"
-              className="pb-4 text-3xl font-bold"
-            >
-              Command Palette
-            </h2>
-            <p>TBD</p>
+            <GettingStarted />
           </section>
 
           <section className="pt-24">
-            <h1 id="settings" className="mb-4 text-4xl font-bold">
-              Settings
-            </h1>
-            <p>TBD</p>
+            <RemarkableFeatures />
+          </section>
+          <section className="pt-24">
+            <Settings />
           </section>
 
           <section className="pt-24">
-            <h1 id="advanced" className="mb-4 text-4xl font-bold">
-              Advanced
-            </h1>
-            <p>TBD</p>
+            <Advanced />
           </section>
 
           <section className="pt-24 feature-list prose">
-            <Foobar />
+            <FeatureList />
           </section>
         </div>
       </div>
