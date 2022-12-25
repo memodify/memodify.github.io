@@ -60,8 +60,11 @@ const Main: NextPage<Props> = (props) => {
               [<Advanced />],
               [<FeatureList />],
             ] as const
-          ).map((e, idx) => (
-            <section className={[idx > 0 ? "pt-24" : null, "prose"].join(" ")}>
+          ).map(([e], idx) => (
+            <section
+              className={[idx > 0 ? "pt-24" : null, "prose"].join(" ")}
+              key={`section${idx}`}
+            >
               {e}
             </section>
           ))}
