@@ -1,6 +1,7 @@
 // @ts-check
 import remarkGfm from "remark-gfm";
 import remarkSlug from "remark-slug";
+import remarkFrontmatter from "remark-frontmatter";
 import withMDXFm from "@next/mdx"; // instead of @next/mdx
 
 const withMDX = withMDXFm({
@@ -9,7 +10,7 @@ const withMDX = withMDXFm({
     // If you use remark-gfm, you'll need to use next.config.mjs
     // as the package is ESM only
     // https://github.com/remarkjs/remark-gfm#install
-    remarkPlugins: [remarkSlug, remarkGfm],
+    remarkPlugins: [remarkFrontmatter, remarkSlug, remarkGfm],
     rehypePlugins: [],
     // If you use `MDXProvider`, uncomment the following line.
     // providerImportSource: "@mdx-js/react",
