@@ -7,7 +7,6 @@ import RemarkableFeatures from "../contents/remarkable-features.mdx";
 import GettingStarted from "../contents/getting-started.mdx";
 import Settings from "../contents/settings.mdx";
 import Advanced from "../contents/advanced.mdx";
-import dynamic from "next/dynamic";
 
 const Docs: NextPage<Props> = (props) => {
   return (

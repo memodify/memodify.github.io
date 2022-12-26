@@ -13,10 +13,9 @@ const Page: NextPage<Props> = (props) => {
 
 const Main: NextPage<Props> = (props) => {
   const Content = dynamic(() => import(`../../posts/${props.filename}`));
-  console.log({ Content });
   return (
     <>
-      <section className="prose">
+      <section className="prose" style={{ marginLeft: "10rem" }}>
         <Content />
       </section>
     </>
@@ -31,7 +30,7 @@ type Props = {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = ["/blog/test"]; // getAllPostIds();
+  const paths = ["/blog/test", "/blog/hello"]; // getAllPostIds();
   return {
     paths,
     fallback: false,
