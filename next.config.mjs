@@ -11,7 +11,7 @@ const withMDX = withMDXFm({
     // as the package is ESM only
     // https://github.com/remarkjs/remark-gfm#install
     remarkPlugins: [
-      [remarkFm, { path: "../components/Post" }],
+      [remarkFm, { layoutPath: "../components/Post" }],
       remarkSlug,
       remarkGfm,
     ],

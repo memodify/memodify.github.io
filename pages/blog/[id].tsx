@@ -29,8 +29,17 @@ type Props = {
   filename: string;
 };
 
+const postsDirectory = "./posts";
+
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = ["/blog/test", "/blog/hello"]; // getAllPostIds();
+  const paths = fs.readdirSync(postsDirectory).map((fn) => {
+    return {
+      params: {
+        id: fn.replace(/\.mdx$/, "").replace(/^[^_]*_/, ""), // e.g: whatever-something_foo-bar.mdx -> foo-bar.mdx
+      },
+    };
+  });
+
   return {
     paths,
     fallback: false,
@@ -38,13 +47,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
-  const path = params?.id as string;
-  const posts = fs.readdirSync("./posts").map((e) => e);
-  const it = posts.find((e) => e.match(new RegExp(`.*${path}.*`)));
+  const path = params?.id;
+  const posts = fs.readdirSync(postsDirectory).map((e) => e);
+  const it = posts.find((e) => e.match(new RegExp(`.*_?${path}.mdx?$`)));
   if (!it) {
     throw new Error(`not found. ${path} is missing. check your the posts.`);
   }
-
   return {
     props: {
       posts,
