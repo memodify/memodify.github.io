@@ -2,7 +2,7 @@
 import remarkGfm from "remark-gfm";
 import remarkSlug from "remark-slug";
 import withMDXFm from "@next/mdx";
-import remarkFm from "./lib/frontmatter.mjs";
+import remarkFm from "remark-next-mdx-frontmatter";
 
 const withMDX = withMDXFm({
   extension: /\.mdx?$/,
