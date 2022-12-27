@@ -4515,10 +4515,10 @@ remark-mdx@^2.0.0:
     mdast-util-mdx "^2.0.0"
     micromark-extension-mdxjs "^1.0.0"
 
-remark-next-mdx-frontmatter@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/remark-next-mdx-frontmatter/-/remark-next-mdx-frontmatter-0.0.2.tgz#af495bb6daedb37df3373bb9ac5b62e6a974d0af"
-  integrity sha512-6j9Wp7wWkDqaJUmOHgQ1oLAj+8bYmx8byowBx12KoBgepG1/Eq09o57KRbyY+5TxoTreRmPGcsyBUAU2soXwSA==
+remark-next-mdx-frontmatter@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/remark-next-mdx-frontmatter/-/remark-next-mdx-frontmatter-0.0.3.tgz#b6247a9a85d99311ba1e4caa7eb9e7e41d884b4e"
+  integrity sha512-dQgLvCsgQaDDHK7M5KaLri2FHsKHspCv68chqibsSXpHAyASZFKRmG/l+WCp4kcNWyZ27/aBasjyliksbk0HOQ==
   dependencies:
     gray-matter "^4.0.3"
 

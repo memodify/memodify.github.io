@@ -34,7 +34,7 @@
     "next-superjson": "^0.0.4",
     "postcss": "^8.3.9",
     "remark-gfm": "^3.0.1",
-    "remark-next-mdx-frontmatter": "^0.0.2",
+    "remark-next-mdx-frontmatter": "^0.0.3",
     "remark-slug": "^7.0.1",
     "sass": "^1.57.1",
     "superjson": "^1.12.1",
