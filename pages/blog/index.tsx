@@ -4,6 +4,9 @@ import type { GetStaticProps, NextPage } from "next";
 import path from "path";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+dayjs.extend(utc);
 
 const Page: NextPage<Props> = (props) => {
   return (
@@ -19,7 +22,7 @@ const Page: NextPage<Props> = (props) => {
 
 const Main: NextPage<Props> = (props) => {
   const toLink = (s: string) => {
-    return "blog/" + s.replace(/\.mdx?$/, "").replace(/^[^_]+_/, "");
+    return "/blog/" + s.replace(/\.mdx?$/, "").replace(/^[^_]+_/, "");
   };
   return (
     <article className="container mx-auto prose">
@@ -50,7 +53,7 @@ const Main: NextPage<Props> = (props) => {
 export default Page;
 
 interface Post {
-  created_at: string;
+  created_at: string | null;
   id: string;
   title: string;
   published: boolean;
@@ -69,7 +72,9 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
     const { data } = matter(body);
     return {
       title: data.title,
-      created_at: data.created_at?.toISOString(),
+      created_at: data.created_at
+        ? dayjs(data.created_at).utc().format("YYYY-MM-DDTHH:mm:ssZ")
+        : null,
       id: e,
       published: data.published || process.env.NODE_ENV != "production",
     };

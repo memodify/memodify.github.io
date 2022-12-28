@@ -5,24 +5,17 @@ import dynamic from "next/dynamic";
 const Page: NextPage<Props> = (props) => {
   return (
     <>
-      an entry
       <Main {...props} />
     </>
   );
 };
 
+export default Page;
+
 const Main: NextPage<Props> = (props) => {
   const Content = dynamic(() => import(`../../posts/${props.filename}`));
-  return (
-    <>
-      <section className="prose" style={{ marginLeft: "10rem" }}>
-        <Content />
-      </section>
-    </>
-  );
+  return <Content />;
 };
-
-export default Page;
 
 type Props = {
   posts: string[];
