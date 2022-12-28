@@ -15,9 +15,9 @@ export default function Header() {
           <Link href="/#whats-this" className="mr-5 hover:text-gray-900">What's this</Link>
           <Link href="/#feature" className="mr-5 hover:text-gray-900">Feature</Link>
           <Link href="/#live-demo" className="mr-5 hover:text-gray-900">Live Demo</Link>
+          <Link href="/#pricing" className="mr-5 hover:text-gray-900">Pricing</Link>
           <Link href="/docs" className="mr-5">Docs</Link>
           <Link href="/blog" className="mr-5">Blog</Link>
-          <Link href="/#pricing" className="mr-5 hover:text-gray-900">Pricing</Link>
           <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 hover:drop-shadow-md">
             <a
               className="hover:text-gray-900 whitespace-nowrap"
