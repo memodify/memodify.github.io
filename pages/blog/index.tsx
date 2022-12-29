@@ -25,7 +25,7 @@ const Main: NextPage<Props> = (props) => {
     return "/blog/" + s.replace(/\.mdx?$/, "").replace(/^[^_]+_/, "");
   };
   return (
-    <article className="container mx-auto prose">
+    <article className="container mx-auto px-5 prose">
       <h1>Blog</h1>
       <section>
         <ul>

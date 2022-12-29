@@ -1,4 +1,3 @@
-import { relative } from "path";
 import type { Frontmatter } from "remark-next-mdx-frontmatter";
 import Footer from "../Footer";
 import Header from "../Header";
@@ -13,9 +12,9 @@ type PageLayoutProps = {
  * Take a look at https://tailwindcss.com/docs/height also.
  */
 
-export default function PageLayout({ children, frontmatter }: PageLayoutProps) {
+export default function BlogEntryLayout({ children, frontmatter }: PageLayoutProps) {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen px-5">
       <Header />
       <main className="prose mx-auto">
         <h1>{frontmatter.title}</h1>
