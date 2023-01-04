@@ -34,6 +34,7 @@ export default function Footer() {
             href="https://github.com/tmtk75"
             target="github/tmtk75"
           >
+            {/* https://iconmonstr.com/github-1-svg/ */}
             <svg
               fill="currentColor"
               strokeLinecap="round"
@@ -82,6 +83,7 @@ export default function Footer() {
             href="https://www.instagram.com/tmtk75/"
             target="instagram"
           >
+            {/* https://tailblocks.cc/ */}
             <svg
               fill="none"
               stroke="currentColor"
