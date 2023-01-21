@@ -34,6 +34,7 @@ v0.0.0-alpha.10
 - Text Search by lunr
 - Editor
     - Save folding state.
+    - Surround with \<detail> by F1 menu.
 - Preivew
     - Rendering MDX.
     - GitHub Flavored Markdown.
@@ -50,7 +51,7 @@ v0.0.0-alpha.10
 - Command palette interface.
     - Customize if labels are shown.
 - Note palette interface.
-- Daily note as local file in the vault directory (application only).
+- Daily note as local file in the vault directory. <AppTag />
 - Backup and restore with CouchDB.
 - Zen mode.
 - Theme.
@@ -63,3 +64,7 @@ TBD
 {/* | Left-aligned | Center-aligned | Right-aligned |
 | ------------ | -------------- | ------------- |
 | git status   | git commit     | git log       | */}
+
+export const AppTag = () => (
+  <span style={{backgroundColor: "#909090", color: "white", padding: "2px 4px", fontSize: "77%", fontWeight: "bold", borderRadius: "2px"}}>app-only</span>
+)
