@@ -28,12 +28,23 @@ const Main: NextPage<Props> = (props) => {
               <Link href="/docs#getting-started">Getting Started</Link>
             </li>
             <li className="mb-3">
-              <Link href="/docs#settings">Feature</Link>
+              <Link href="/docs#settings">Remarkable Features</Link>
               <ul className="ml-3">
                 <li>
-                  <Link href="/docs#remarkable-features_command-palette">
-                    Command Palette
+                  <Link href="/docs#mdx">
+                    MDX
+                    <ul className="ml-3">
+                      <li>
+                        <Link href="/docs#chartjs">Chart.js</Link>
+                      </li>
+                      <li>
+                        <Link href="/docs#mermaid">Mermaid</Link>
+                      </li>
+                    </ul>
                   </Link>
+                </li>
+                <li>
+                  <Link href="/docs#command-palette">Command Palette</Link>
                 </li>
               </ul>
             </li>
