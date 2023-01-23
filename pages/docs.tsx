@@ -22,47 +22,33 @@ const Main: NextPage<Props> = (props) => {
   return (
     <>
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row text-gray-700">
-        <div className="w-1/5">
-          <ul className="flex flex-col" style={{ position: "sticky", top: 0 }}>
-            <li className="mb-3">
-              <Link href="/docs#getting-started">Getting Started</Link>
-            </li>
-            <li className="mb-3">
-              <Link href="/docs#settings">Remarkable Features</Link>
+        <div className="md:w-1/5">
+          <ul
+            className="flex flex-col md:text-sm"
+            style={{ position: "sticky", top: 0 }}
+          >
+            <ListItem className="mb-3" value="Getting Started" />
+            <ListItem className="mb-3" value="Remarkable Features">
               <ul className="ml-3">
-                <li>
-                  <Link href="/docs#mdx">
-                    MDX
-                    <ul className="ml-3">
-                      <li>
-                        <Link href="/docs#chartjs">Chart.js</Link>
-                      </li>
-                      <li>
-                        <Link href="/docs#mermaid">Mermaid</Link>
-                      </li>
-                    </ul>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/docs#command-palette">Command Palette</Link>
-                </li>
+                <ListItem value="MDX">
+                  <ul className="ml-3">
+                    <ListItem value="Chart.js" />
+                    <ListItem value="Mermaid" />
+                    <ListItem value="Caution" />
+                  </ul>
+                </ListItem>
+                <ListItem value="Command Palette" />
               </ul>
-            </li>
-            <li className="mb-3">
-              <Link href="/docs#settings">Settings</Link>
-            </li>
-            <li className="mb-3">
-              <Link href="/docs#advanced">Advanced</Link>
-            </li>
-            <li className="mb-3">
-              <Link href="/docs#feature-list">Feature List</Link>
-            </li>
+            </ListItem>
+            <ListItem className="mb-3" value="Settings" />
+            <ListItem className="mb-3" value="Advanced" />
+            <ListItem className="mb-3" value="Feature List" />
           </ul>
-          <div className="text-xs">
+          <div className="md:text-xs mt-3">
             built at {props.meta.builtAt.toISOString()}
           </div>
         </div>
-        <div className="w-4/5">
+        <div className="md:w-4/5">
           {(
             [
               [<GettingStarted />],
@@ -102,3 +88,27 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     },
   };
 };
+
+const toSlug = (s: string) =>
+  s
+    .toLowerCase()
+    .replaceAll(/ /g, "-")
+    .replaceAll(/[^a-z0-9-_]+/g, "");
+
+type ListItemProps = {
+  value: string;
+  className?: string;
+  children?: JSX.Element;
+};
+
+function ListItem(props: ListItemProps) {
+  const { value, className, children } = props;
+  return (
+    <li>
+      <Link href={"#" + toSlug(value)} className={className}>
+        {value}
+        {children}
+      </Link>
+    </li>
+  );
+}
