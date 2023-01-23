@@ -7,6 +7,7 @@ import RemarkableFeatures from "../contents/remarkable-features.mdx";
 import GettingStarted from "../contents/getting-started.mdx";
 import Settings from "../contents/settings.mdx";
 import Advanced from "../contents/advanced.mdx";
+import { createElement } from "react";
 
 const Docs: NextPage<Props> = (props) => {
   return (
@@ -18,53 +19,68 @@ const Docs: NextPage<Props> = (props) => {
   );
 };
 
+const sections = [
+  GettingStarted,
+  RemarkableFeatures,
+  Settings,
+  Advanced,
+  FeatureList,
+] as const;
+
 const Main: NextPage<Props> = (props) => {
+  const children = sections.map((f) => f({}).props.children).flat();
+  const items = children
+    .filter((e) => e.type.match(/^h[1-6]$/))
+    .map((e) => ({
+      level: (() => parseInt(e.type.match(/^h([1-6])$/)[1]))(),
+      id: e.props.id,
+      text: e.props.children,
+    }));
+  const toCNs = (level: number): string[] => {
+    switch (level) {
+      case 1:
+        return ["h1", "[&:not(:nth-of-type(1))]:mt-2"];
+      case 2:
+        return ["h2", "ml-3", " [&>li.h2:not(:nth-of-type(1))]:mt-2"];
+      case 3:
+        return ["ml-6"];
+    }
+    return [];
+  };
   return (
     <>
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row text-gray-700">
+        {/* Sidebar */}
         <div className="md:w-1/5">
           <ul
-            className="flex flex-col md:text-sm"
+            className="flex flex-col md:text-sm [&>*.h1]:font-semibold"
             style={{ position: "sticky", top: 0 }}
           >
-            <ListItem className="mb-3" value="Getting Started" />
-            <ListItem className="mb-3" value="Remarkable Features">
-              <ul className="ml-3">
-                <ListItem value="MDX">
-                  <ul className="ml-3">
-                    <ListItem value="Chart.js" />
-                    <ListItem value="Mermaid" />
-                    <ListItem value="Caution" />
-                  </ul>
-                </ListItem>
-                <ListItem value="Command Palette" />
-              </ul>
-            </ListItem>
-            <ListItem className="mb-3" value="Settings" />
-            <ListItem className="mb-3" value="Advanced" />
-            <ListItem className="mb-3" value="Feature List" />
+            {items.map((e) => (
+              <ListItem
+                id={e.id}
+                value={e.text}
+                className={toCNs(e.level).join(" ")}
+              />
+            ))}
           </ul>
           <div className="md:text-xs mt-3">
             built at {props.meta.builtAt.toISOString()}
           </div>
         </div>
+
+        {/* Body */}
         <div className="md:w-4/5">
-          {(
-            [
-              [<GettingStarted />],
-              [<RemarkableFeatures />],
-              [<Settings />],
-              [<Advanced />],
-              [<FeatureList />],
-            ] as const
-          ).map(([e], idx) => (
-            <section
-              className={[idx > 0 ? "pt-24" : null, "prose"].join(" ")}
-              key={`section${idx}`}
-            >
-              {e}
-            </section>
-          ))}
+          {sections
+            .map((sec) => [createElement(sec)] as const)
+            .map(([e], idx) => (
+              <section
+                className={[idx > 0 ? "pt-24" : null, "prose"].join(" ")}
+                key={`section${idx}`}
+              >
+                {e}
+              </section>
+            ))}
         </div>
       </div>
     </>
@@ -89,23 +105,18 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-const toSlug = (s: string) =>
-  s
-    .toLowerCase()
-    .replaceAll(/ /g, "-")
-    .replaceAll(/[^a-z0-9-_]+/g, "");
-
 type ListItemProps = {
+  id: string;
   value: string;
   className?: string;
   children?: JSX.Element;
 };
 
 function ListItem(props: ListItemProps) {
-  const { value, className, children } = props;
+  const { value, id, className, children } = props;
   return (
-    <li>
-      <Link href={"#" + toSlug(value)} className={className}>
+    <li className={className}>
+      <Link href={`#${id}`}>
         {value}
         {children}
       </Link>
