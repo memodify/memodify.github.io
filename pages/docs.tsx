@@ -61,6 +61,7 @@ const Main: NextPage<Props> = (props) => {
                 id={e.id}
                 value={e.text}
                 className={toCNs(e.level).join(" ")}
+                key={e.id}
               />
             ))}
           </ul>
