@@ -1,2 +1,23 @@
 # Advanced
-TBD
+## CouchDB
+You can backup and restore into CouchDB.
+
+Go to `Settings` -> `Datbase: CouchDB URL`.
+
+Input http://admin:password@localhost:5984/memodify.
+
+```
+$ docker run \
+    -e COUCHDB_USER=admin \
+    -e COUCHDB_PASSWORD=password \
+    -p 5984:5984 \
+    -v `pwd`/couchdb:/opt/couchdb/data \
+    couchdb:3.3.1
+```
+```
+npx add-cors-to-couchdb http://admin:password@localhost:5984
+```
+
+Then you can backup your all documnets for memodify.
+
+Open the command palette with `Shift + command + P`, then select `file:backup`.
