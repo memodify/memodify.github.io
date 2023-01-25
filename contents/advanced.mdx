@@ -21,3 +21,8 @@ npx add-cors-to-couchdb http://admin:password@localhost:5984
 Then you can backup your all documnets for memodify.
 
 Open the command palette with `Shift + command + P`, then select `file:backup`.
+
+### Conflict resolution
+Please note memodify doesn't resolve conflicts automatically.
+You have to resolve them by yourself. In order to do that,
+you can use CouchDB admin console. It's http://localhost:5984/_utils if your CouchDB is running at your own host.

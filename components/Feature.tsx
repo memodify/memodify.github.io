@@ -121,6 +121,31 @@ export default function Feature() {
               text fields.
             </p>
           </FeatureItem>
+          <FeatureItem title={"Encryption"} icon={svgLightening}>
+            <p>
+              Memodify allows you to encrypt note body. It is possible on a per
+              note basis. This feature can be useful in situations where some
+              notes need to be confidential. (Experimental)
+            </p>
+          </FeatureItem>
+          <FeatureItem title={"Undo/redo"} icon={svgLight}>
+            <p>
+              Undo and redo are supported with the exception of a few features like empty-trash, even though in-browser mode.
+            </p>
+          </FeatureItem>
+          <FeatureItem title={"Chart.js & Mermaid"} icon={svgLight}>
+            <p>
+              <a href="https://www.chartjs.org/" target="_blank">
+                Chart.js
+              </a>{" "}
+              is available. You can put some types of charts in your note and
+              see them in the preview.
+              <a href="https://mermaid.js.org/" target="_blank">
+                Mermaid
+              </a>{" "}
+              is available, too. Memodify supports them as builtin components.
+            </p>
+          </FeatureItem>
         </div>
       </div>
     </section>
