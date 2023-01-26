@@ -30,6 +30,7 @@ const sections = [
 const Main: NextPage<Props> = (props) => {
   const children = sections.map((f) => f({}).props.children).flat();
   const items = children
+    .filter((e) => e.type.match)
     .filter((e) => e.type.match(/^h[1-6]$/))
     .map((e) => ({
       level: (() => parseInt(e.type.match(/^h([1-6])$/)[1]))(),

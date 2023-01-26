@@ -1,3 +1,5 @@
+import { Chip } from "../components/elements/Chip";
+
 # Remarkable Features
 
 ## MDX
@@ -16,28 +18,47 @@ TBD
 
 ### Caution
 
-<span
-  style={{
-    backgroundColor: "tomato",
-    color: "white",
-    fontWeight: "bold",
-    padding: "2px 4px",
-    borderRadius: "2px",
-    fontSize: "90%",
-  }}
->Caution</span>
-When using MDX feature in Memodify, it is important to only use
-content from trusted sources. MDX can potentially execute malicious code, known as
-self-XSS, which can compromise your device's security. I recommend only using MDX
-with content that you have personally created or obtained from a trusted source.
-Use this feature at your own risk, and always be vigilant when inputting or importing
-content into the MDX editor.
+<Chip style={{ backgroundColor: "tomato" }}>Caution</Chip>
+When using MDX feature in Memodify, it is important to only use content from trusted
+sources. MDX can potentially execute malicious code, known as self-XSS, which can
+compromise your device's security. I recommend only using MDX with content that you
+have personally created or obtained from a trusted source. Use this feature at your
+own risk, and always be vigilant when inputting or importing content into the MDX
+editor.
 
 ## Palette Interface
+
 ### Command palette
+
 You can use command palette with `command + shift + p`.
+
 <img width="48%" src="/focus-command-palette.png" />
 
 ### Note palette
+
 You can focus on a note with note palette. It's activated with `command + p`.
-<img width="48%" src="/note-palette.png"/>
+
+<img width="48%" src="/note-palette.png" />
+
+## Per-note encryption
+
+It's supported to encrypt the focused note body.
+
+`crypto:encrypt note body` opens a dialog and you can enter a passphrase.
+It converts the body to a JSON object like this.
+
+```
+{
+  "ciphertext": "dtsLElgKr9p4r5L8xZoiOw==",
+  "iv": "5aL3VtMJsSRjrYaJ",
+  "salt": "jOV7M/sQcJaxIB3xj+uaYw=="
+}
+```
+
+`crypto:decrypt note body` decrypt it.
+
+<Chip>Note</Chip> Currenly the preview shows an error like this
+because `{...}` is recognized as an MDX expression. I'm going to suppress this in the future.
+
+> 2:15 Could not parse expression with acorn: Unexpected content after expression
+
