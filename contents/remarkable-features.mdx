@@ -5,14 +5,58 @@ import { Chip } from "../components/elements/Chip";
 ## MDX
 
 [MDX](https://mdxjs.com/) allows you to use JSX in your markdown content.
+You can define your components in your notes.
 
-Memodify supports Chart.js and Mermaid as builtin components. You can embed charts and diagrams easily.
+Memodify also has builtin components which support Chart.js and Mermaid.
+You can easily embed charts and diagrams into your notes.
 
-### Chart.js
+<img width="66%" src="/mdx.png" />
 
-TBD
+### Charts (Chart.js)
 
-### Mermaid
+You can embed a few types of charts supported by Charts.js.
+Now Bar, Line and Scatter charts are supported as builtin component.
+
+<div style={{ display: "flex" }}>
+  <img width="33%" src="/bar-chart.png" />
+  <img width="33%" src="/line-chart.png" />
+</div>
+
+<details>
+  <summary>Bar chart sample</summary>
+```
+export const width = 256*1.414;
+export const height = 256;
+export const style = { backgroundColor: "white", padding: "0 4px" }
+export const options = {
+  responsive: false,
+  maintainAspectRatio: false,
+  plugins: {
+    legend: { position: "bottom" },
+    title: { display: true, text: "Chart.js chart" },
+  },
+}
+export const labels = ["January", "February", "March", "April", "May", "June", "July"];
+export const barData = {
+  labels,
+  datasets: [
+    {
+      label: "Dataset 1",
+      data: labels.map(() => Math.random() * 100),
+      backgroundColor: "rgba(255, 99, 132, 0.5)",
+    },
+    {
+      label: "Dataset 2",
+      data: labels.map(() => Math.random() * 100),
+      backgroundColor: "rgba(53, 162, 235, 0.5)",
+    },
+  ],
+};
+<chartjs.Bar style={style} width={width} height={height} options={options} data={barData} />
+```
+</details>
+
+### Diagrams (Mermaid)
 
 TBD
 
@@ -26,19 +70,23 @@ have personally created or obtained from a trusted source. Use this feature at y
 own risk, and always be vigilant when inputting or importing content into the MDX
 editor.
 
+## Math expressions (KaTeX)
+
+TBD
+
 ## Palette Interface
 
 ### Command palette
 
 You can use command palette with `command + shift + p`.
 
-<img width="48%" src="/focus-command-palette.png" />
+<img width="66%" src="/focus-command-palette.png" />
 
 ### Note palette
 
 You can focus on a note with note palette. It's activated with `command + p`.
 
-<img width="48%" src="/note-palette.png" />
+<img width="66%" src="/note-palette.png" />
 
 ## Per-note encryption
 
@@ -61,4 +109,3 @@ It converts the body to a JSON object like this.
 because `{...}` is recognized as an MDX expression. I'm going to suppress this in the future.
 
 > 2:15 Could not parse expression with acorn: Unexpected content after expression
-
