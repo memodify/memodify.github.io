@@ -54,7 +54,7 @@ const Main: NextPage<Props> = (props) => {
         {/* Sidebar */}
         <div className="md:w-1/5">
           <ul
-            className="flex flex-col md:text-sm [&>*.h1]:font-semibold"
+            className="flex flex-col md:text-sm [&>*.h1]:font-semibold [&>li]:leading-[1.5rem]"
             style={{ position: "sticky", top: 0 }}
           >
             {items.map((e) => (
