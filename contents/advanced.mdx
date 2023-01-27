@@ -19,7 +19,7 @@ Go to `Settings` -> `Datbase: CouchDB URL`.
 
 Input http://admin:password@localhost:5984/memodify.
 
-```
+```bash
 $ docker run \
     -e COUCHDB_USER=admin \
     -e COUCHDB_PASSWORD=password \
@@ -27,8 +27,8 @@ $ docker run \
     -v `pwd`/couchdb:/opt/couchdb/data \
     couchdb:3.3.1
 ```
-```
-npx add-cors-to-couchdb http://admin:password@localhost:5984
+```bash
+$ npx add-cors-to-couchdb http://admin:password@localhost:5984
 ```
 
 Then you can backup your all documnets for memodify.

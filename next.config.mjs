@@ -3,6 +3,7 @@ import remarkGfm from "remark-gfm";
 import remarkSlug from "remark-slug";
 import withMDXFm from "@next/mdx";
 import remarkFm from "remark-next-mdx-frontmatter";
+import remarkPrism from "remark-prism";
 
 const withMDX = withMDXFm({
   extension: /\.mdx?$/,
@@ -12,6 +13,7 @@ const withMDX = withMDXFm({
     // https://github.com/remarkjs/remark-gfm#install
     remarkPlugins: [
       [remarkFm, { layoutPath: "../components/Post" }],
+      remarkPrism,
       remarkSlug,
       remarkGfm,
     ],

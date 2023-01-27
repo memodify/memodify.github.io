@@ -9,6 +9,11 @@ import Settings from "../contents/settings.mdx";
 import Advanced from "../contents/advanced.mdx";
 import { createElement } from "react";
 
+// require("prismjs/themes/prism.min.css");
+// require("prismjs/themes/prism-solarizedlight.min.css");
+require("prismjs/themes/prism-tomorrow.min.css");
+// require("prismjs/themes/prism-okaidia.min.css");
+
 const Docs: NextPage<Props> = (props) => {
   return (
     <>
