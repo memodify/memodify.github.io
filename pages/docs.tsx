@@ -82,7 +82,11 @@ const Main: NextPage<Props> = (props) => {
             .map((sec) => [createElement(sec)] as const)
             .map(([e], idx) => (
               <section
-                className={[idx > 0 ? "pt-24" : null, "prose"].join(" ")}
+                className={[
+                  idx > 0 ? "pt-24" : null,
+                  "prose",
+                  "[&_.remark-highlight]:text-[14px]", // font-size for code block. see: https://zenn.dev/ixkaito/articles/advanced-tailwindcss#%E5%AD%90%E5%AD%AB%E8%A6%81%E7%B4%A0%E3%81%AE%E4%B8%80%E6%8B%AC%E6%8C%87%E5%AE%9A%E3%81%AF-_-%E3%82%92%E4%BD%BF%E3%81%86
+                ].join(" ")}
                 key={`section${idx}`}
               >
                 {e}
