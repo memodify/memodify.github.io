@@ -21,7 +21,8 @@ a {
 
 // Disable backquote ` for <code> given by .prose
 .prose :where(code):not(:where([class~="not-prose"] *)) {
-  &::before, &::after {
+  &::before,
+  &::after {
     content: "";
   }
 }

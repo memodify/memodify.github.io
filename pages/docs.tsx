@@ -85,7 +85,9 @@ const Main: NextPage<Props> = (props) => {
                 className={[
                   idx > 0 ? "pt-24" : null,
                   "prose",
-                  "[&_.remark-highlight]:text-[14px]", // font-size for code block. see: https://zenn.dev/ixkaito/articles/advanced-tailwindcss#%E5%AD%90%E5%AD%AB%E8%A6%81%E7%B4%A0%E3%81%AE%E4%B8%80%E6%8B%AC%E6%8C%87%E5%AE%9A%E3%81%AF-_-%E3%82%92%E4%BD%BF%E3%81%86
+                  '[&_code[class^="language-"]]:text-[9pt]', // font-size for code block. see: https://zenn.dev/ixkaito/articles/advanced-tailwindcss#%E5%AD%90%E5%AD%AB%E8%A6%81%E7%B4%A0%E3%81%AE%E4%B8%80%E6%8B%AC%E6%8C%87%E5%AE%9A%E3%81%AF-_-%E3%82%92%E4%BD%BF%E3%81%86
+                  '[&_code[class^="language-"]]:leading-none', // line-height: 1.0
+                  '[&_pre[class^="language-"]]:leading-none', // line-height: 1.0
                 ].join(" ")}
                 key={`section${idx}`}
               >

@@ -3,7 +3,7 @@ import remarkGfm from "remark-gfm";
 import remarkSlug from "remark-slug";
 import withMDXFm from "@next/mdx";
 import remarkFm from "remark-next-mdx-frontmatter";
-import remarkPrism from "remark-prism";
+import rehypePrism from "@mapbox/rehype-prism";
 
 const withMDX = withMDXFm({
   extension: /\.mdx?$/,
@@ -13,11 +13,12 @@ const withMDX = withMDXFm({
     // https://github.com/remarkjs/remark-gfm#install
     remarkPlugins: [
       [remarkFm, { layoutPath: "../components/Post" }],
-      remarkPrism,
       remarkSlug,
       remarkGfm,
     ],
-    rehypePlugins: [],
+    rehypePlugins: [
+      [rehypePrism, { ignoreMissing: true }], // syntax highlighting. https://github.com/mapbox/rehype-prism
+    ],
     // If you use `MDXProvider`, uncomment the following line.
     // providerImportSource: "@mdx-js/react",
   },

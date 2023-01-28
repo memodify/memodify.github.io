@@ -74,6 +74,31 @@ editor.
 
 TBD
 
+## Syntax Highlighting
+
+Syntax highlighting is supported with [Prism](https://prismjs.com/).
+Lots of languages are recognized. Here is [the supported languages](https://prismjs.com/index.html#supported-languages).
+
+````markdown
+```javascript
+function main() {
+  console.log("hello, world.");
+}
+```
+````
+````markdown
+```yaml
+name: Run a workflow
+on:
+  push:
+    branches:
+      - master
+      - release/[0-9]+\.[0-9]+
+env:
+  SLACK_CHANNEL: general
+```
+````
+
 ## Palette Interface
 
 ### Command palette
