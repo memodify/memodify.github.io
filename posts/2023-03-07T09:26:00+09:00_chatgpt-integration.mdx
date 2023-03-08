@@ -1,0 +1,25 @@
+---
+title: ChatGPT integration (experimentally)
+created_at: 2023-03-07T10:01:00+09:00
+layoutPath: ../components/layouts/BlogEntryLayout
+published: false
+---
+
+I have experimentally implemented the ChatGPT function, which is currently trending.
+You can send the selected text on the editor to ChatGPT.
+
+Press `F1` to show the editor menu after selection and choose "Experimental:Send to ChatGPT".
+The response will be inserted just after the selected text.
+
+<img
+  width="77%"
+  style={{ borderRadius: "4px" }}
+  src="/editor-action-chatgpt.png"
+/>
+
+At the moment, previous questions cannot be taken over, so you cannot ask consecutive questions.
+
+An OpenAI API key is required.
+Please obtain an API key from the following website and set it according to
+the instructions [here](/docs/#configyaml), then restart the application.
+https://platform.openai.com/account/api-keys
