@@ -67,18 +67,22 @@ const postsDirectory = "./posts";
 
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
   console.log({ params });
-  const posts = fs.readdirSync(postsDirectory).map((e) => {
-    const body = fs.readFileSync(path.join(postsDirectory, e));
-    const { data } = matter(body);
-    return {
-      title: data.title,
-      created_at: data.created_at
-        ? dayjs(data.created_at).utc().format("YYYY-MM-DDTHH:mm:ssZ")
-        : null,
-      id: e,
-      published: data.published || process.env.NODE_ENV != "production",
-    };
-  });
+  const posts = fs
+    .readdirSync(postsDirectory)
+    .sort()
+    .reverse()
+    .map((e) => {
+      const body = fs.readFileSync(path.join(postsDirectory, e));
+      const { data } = matter(body);
+      return {
+        title: data.title,
+        created_at: data.created_at
+          ? dayjs(data.created_at).utc().format("YYYY-MM-DDTHH:mm:ssZ")
+          : null,
+        id: e,
+        published: data.published || process.env.NODE_ENV != "production",
+      };
+    });
   return {
     props: {
       posts,
