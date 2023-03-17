@@ -31,8 +31,8 @@ export default function Footer() {
         <p className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           <a
             className="text-gray-500"
-            href="https://github.com/tmtk75"
-            target="github/tmtk75"
+            href="https://github.com/memodify"
+            target="github/memodify"
           >
             {/* https://iconmonstr.com/github-1-svg/ */}
             <svg
@@ -64,7 +64,7 @@ export default function Footer() {
           </a>
           <a
             className="ml-3 text-gray-500"
-            href="https://twitter.com/tmtk75"
+            href="https://twitter.com/memodifyapp"
             target="twitter"
           >
             <svg
