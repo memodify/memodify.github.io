@@ -8,6 +8,7 @@ import GettingStarted from "../contents/getting-started.mdx";
 import Settings from "../contents/settings.mdx";
 import Advanced from "../contents/advanced.mdx";
 import { createElement } from "react";
+import { classNameCodeWithPrismjs } from "../lib/classNames";
 
 // require("prismjs/themes/prism.min.css");
 // require("prismjs/themes/prism-solarizedlight.min.css");
@@ -53,6 +54,7 @@ const Main: NextPage<Props> = (props) => {
     }
     return [];
   };
+
   return (
     <>
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row text-gray-700">
@@ -85,9 +87,7 @@ const Main: NextPage<Props> = (props) => {
                 className={[
                   idx > 0 ? "pt-24" : null,
                   "prose",
-                  '[&_code[class^="language-"]]:text-[9pt]', // font-size for code block. see: https://zenn.dev/ixkaito/articles/advanced-tailwindcss#%E5%AD%90%E5%AD%AB%E8%A6%81%E7%B4%A0%E3%81%AE%E4%B8%80%E6%8B%AC%E6%8C%87%E5%AE%9A%E3%81%AF-_-%E3%82%92%E4%BD%BF%E3%81%86
-                  '[&_code[class^="language-"]]:leading-none', // line-height: 1.0
-                  '[&_pre[class^="language-"]]:leading-none', // line-height: 1.0
+                  ...classNameCodeWithPrismjs,
                 ].join(" ")}
                 key={`section${idx}`}
               >

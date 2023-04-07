@@ -1,6 +1,7 @@
 import fs from "fs";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import dynamic from "next/dynamic";
+import { classNameCodeWithPrismjs } from "../../lib/classNames";
 require("prismjs/themes/prism-tomorrow.min.css");
 
 const Page: NextPage<Props> = (props) => {
@@ -15,7 +16,12 @@ export default Page;
 
 const Main: NextPage<Props> = (props) => {
   const Content = dynamic(() => import(`../../posts/${props.filename}`));
-  return <Content />;
+
+  return (
+    <main className={[...classNameCodeWithPrismjs].join(" ")}>
+      <Content />
+    </main>
+  );
 };
 
 type Props = {
