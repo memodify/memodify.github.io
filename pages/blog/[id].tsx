@@ -1,6 +1,7 @@
 import fs from "fs";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import dynamic from "next/dynamic";
+require("prismjs/themes/prism-tomorrow.min.css");
 
 const Page: NextPage<Props> = (props) => {
   return (
