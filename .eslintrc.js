@@ -18,6 +18,7 @@ module.exports = {
     //     },
     //   },
     // ],
+    "@next/next/no-img-element": "off",
     "tailwindcss/classnames-order": "off",
   },
 };
