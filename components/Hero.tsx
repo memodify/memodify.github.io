@@ -9,7 +9,7 @@ export default function Hero() {
           <p className="mb-4 leading-relaxed">
             Taking notes is extremely personal, private, secret, and
             confidential. Without thinking, people may accidentally write down
-            things that they don't want others to see, such as passwords or the
+            things that they don&apos;t want others to see, such as passwords or the
             number of their total assets. Are you sure that no one can see the
             application you are writing in?
           </p>

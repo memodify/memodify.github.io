@@ -38,9 +38,9 @@ export default function Feature() {
               <a href="https://mdxjs.com/" target="mdx">
                 MDX
               </a>
-              . "MDX is an authorable format that lets you seamlessly write JSX
-              in your Markdown documents." You can see how it's rendered with
-              live preview. (Experimental)
+              . &ldquo;MDX is an authorable format that lets you seamlessly
+              write JSX in your Markdown documents.&ldquo; You can see how
+              it&apos;s rendered with live preview. (Experimental)
             </>
           }
         />
@@ -82,9 +82,9 @@ export default function Feature() {
           </FeatureItem>
           <FeatureItem title={"Daily Noting"} icon={svgPen}>
             <p className="leading-relaxed text-base">
-              You can continue editing a single note so that you don't need
-              creating a new file, thinking filename or title, etc. It's
-              automatically categorized, classified and grouped.
+              You can continue editing a single note so that you don&apos;t
+              need creating a new file, thinking filename or title, etc.
+              It&apos;s automatically categorized, classified and grouped.
               <br />
               (In progress)
             </p>
@@ -111,14 +111,14 @@ export default function Feature() {
                 GitHub Flavored Markdown
               </a>{" "}
               so called GFM. You can write listing, tables, quoting, Math
-              expression, etc as GitHub comments though it's a subset.
+              expression, etc as GitHub comments though it&apos;s a subset.
             </p>
           </FeatureItem>
           <FeatureItem title={"Zen mode"} icon={svgLightening}>
             <p>
-              "Zen" mode allows you to concentrate on a task with a simplified
-              UI. In memodify The simplest layout of Memodify consists of a few
-              text fields.
+              &ldquo;Zen&ldquo; mode allows you to concentrate on a task with a
+              simplified UI. In memodify The simplest layout of Memodify
+              consists of a few text fields.
             </p>
           </FeatureItem>
           <FeatureItem title={"Encryption"} icon={svgLightening}>

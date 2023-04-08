@@ -13,7 +13,7 @@ export default function Header() {
         </Link>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
           <Link href="/#whats-this" className="mr-5 hover:text-gray-900">
-            What's this
+            What&apos;s this
           </Link>
           <Link href="/#feature" className="mr-5 hover:text-gray-900">
             Feature
