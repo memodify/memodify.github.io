@@ -190,7 +190,7 @@ function FeatureRight({ title, text, imagePath }: FeatureAProps) {
   return (
     <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
       <div className="grow sm:text-left text-center mt-6 sm:mt-0">
-        <h2 className="text-gray-900 text-lg font-medium mb-2">{title}</h2>
+        <h2 className="text-gray-900 text-lg font-semibold mb-2">{title}</h2>
         <p className="leading-relaxed text-base">{text}</p>
         {/* <a className="mt-3 text-indigo-500 inline-flex items-center">
           Learn More {svgRightArrow}
@@ -210,7 +210,7 @@ function FeatureLeft({ imagePath, title, text }: FeatureAProps) {
         <img src={imagePath} alt="a feature" />
       </div>
       <div className="grow sm:text-left text-center mt-6 sm:mt-0">
-        <h2 className="text-gray-900 text-lg font-medium mb-2">{title}</h2>
+        <h2 className="text-gray-900 text-lg font-semibold mb-2">{title}</h2>
         <p className="leading-relaxed text-base">{text}</p>
         {/* <a className="mt-3 text-indigo-500 inline-flex items-center">
           Learn More {svgRightArrow}
