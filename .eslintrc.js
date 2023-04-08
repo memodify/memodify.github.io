@@ -10,14 +10,14 @@ module.exports = {
   ],
   ignorePatterns: ["*.config.js", "*.config.mjs"],
   rules: {
-    "import/order": [
-      "error",
-      {
-        alphabetize: {
-          order: "asc",
-        },
-      },
-    ],
+    // "import/order": [
+    //   "error",
+    //   {
+    //     alphabetize: {
+    //       order: "asc",
+    //     },
+    //   },
+    // ],
     "tailwindcss/classnames-order": "off",
   },
 };
