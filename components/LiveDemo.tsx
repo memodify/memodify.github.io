@@ -3,7 +3,7 @@ export function LiveDemo() {
     process.env.NEXT_PUBLIC_LIVEDEMO_URL ??
     "http://localhost:3000/demo/editor-preview";
   return (
-    <section id="live-demo" className="text-gray-600 body-font">
+    <section id="live-demo" className="text-gray-600">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-8">
           <h1
@@ -27,7 +27,7 @@ export function LiveDemo() {
           <iframe
             src={livedemoURL}
             width="100%"
-            height={`${240*2 + 8 * 2}px`} // 240 is the height of /demp/editor-preview. 8 is body's margin of iframe.
+            height={`${240 * 2 + 8 * 2}px`} // 240 is the height of /demp/editor-preview. 8 is body's margin of iframe.
             style={{ border: "none", margin: 0, padding: 0 }}
           />
         </div>

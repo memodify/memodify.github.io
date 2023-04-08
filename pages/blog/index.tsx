@@ -1,11 +1,11 @@
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
 import fs from "fs";
 import matter from "gray-matter";
 import type { GetStaticProps, NextPage } from "next";
 import path from "path";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc";
 dayjs.extend(utc);
 
 const Page: NextPage<Props> = (props) => {

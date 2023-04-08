@@ -2,13 +2,13 @@ import { SVGProps } from "react";
 
 export default function Feature() {
   return (
-    <section id="feature" className="text-gray-600 body-font">
+    <section id="feature" className="text-gray-600">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-16">
-          <h1 className="sm:text-4xl text-4xl font-bold title-font text-center text-gray-900 mb-2">
+          <h1 className="sm:text-4xl text-4xl font-bold text-center text-gray-900 mb-2">
             Feature
           </h1>
-          <h2 className="sm:text-2xl text-2xl font-bold title-font text-center text-gray-900 mb-2 mt-8">
+          <h2 className="sm:text-2xl text-2xl font-bold text-center text-gray-900 mb-2 mt-8">
             Not rich features, but enough
           </h2>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">
@@ -61,7 +61,7 @@ export default function Feature() {
 
         {/* ---- More Features ---- */}
         <div className="flex flex-col text-center w-full mb-8">
-          <h2 className="sm:text-2xl text-2xl font-bold title-font text-center text-gray-900 mb-2 mt-8">
+          <h2 className="sm:text-2xl text-2xl font-bold text-center text-gray-900 mb-2 mt-8">
             More features
           </h2>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">
@@ -130,7 +130,8 @@ export default function Feature() {
           </FeatureItem>
           <FeatureItem title={"Undo/redo"} icon={svgLight}>
             <p>
-              Undo and redo are supported with the exception of a few features like empty-trash, even though in-browser mode.
+              Undo and redo are supported with the exception of a few features
+              like empty-trash, even though in-browser mode.
             </p>
           </FeatureItem>
           <FeatureItem title={"Chart.js & Mermaid"} icon={svgLight}>
@@ -188,16 +189,14 @@ type FeatureAProps = {
 function FeatureRight({ title, text, imagePath }: FeatureAProps) {
   return (
     <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-      <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-        <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
-          {title}
-        </h2>
+      <div className="grow sm:text-left text-center mt-6 sm:mt-0">
+        <h2 className="text-gray-900 text-lg font-medium mb-2">{title}</h2>
         <p className="leading-relaxed text-base">{text}</p>
         {/* <a className="mt-3 text-indigo-500 inline-flex items-center">
           Learn More {svgRightArrow}
         </a> */}
       </div>
-      <div className="w-2/5 sm:order-none order-first sm:h-32 h-20 sm:ml-10 inline-flex items-center flex-shrink-0">
+      <div className="w-2/5 sm:order-none order-first sm:h-32 h-20 sm:ml-10 inline-flex items-center shrink-0">
         <img src={imagePath} />
       </div>
     </div>
@@ -207,13 +206,11 @@ function FeatureRight({ title, text, imagePath }: FeatureAProps) {
 function FeatureLeft({ imagePath, title, text }: FeatureAProps) {
   return (
     <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-      <div className="w-2/5 sm:h-32 h-20 sm:mr-10 inline-flex items-center justify-center flex-shrink-0">
+      <div className="w-2/5 sm:h-32 h-20 sm:mr-10 inline-flex items-center justify-center shrink-0">
         <img src={imagePath} />
       </div>
-      <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-        <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
-          {title}
-        </h2>
+      <div className="grow sm:text-left text-center mt-6 sm:mt-0">
+        <h2 className="text-gray-900 text-lg font-medium mb-2">{title}</h2>
         <p className="leading-relaxed text-base">{text}</p>
         {/* <a className="mt-3 text-indigo-500 inline-flex items-center">
           Learn More {svgRightArrow}
@@ -226,13 +223,11 @@ function FeatureLeft({ imagePath, title, text }: FeatureAProps) {
 function FeatureItem({ children, title, icon }: FeatureItemProps) {
   return (
     <div className="p-4 md:w-1/2 lg:w-1/3 flex">
-      <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 mb-4 flex-shrink-0">
+      <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 mb-4 shrink-0">
         {icon}
       </div>
-      <div className="flex-grow pl-6">
-        <h2 className="text-gray-900 text-lg title-font font-semibold mb-2">
-          {title}
-        </h2>
+      <div className="grow pl-6">
+        <h2 className="text-gray-900 text-lg font-semibold mb-2">{title}</h2>
         {children}
       </div>
     </div>

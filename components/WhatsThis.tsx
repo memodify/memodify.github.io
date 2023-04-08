@@ -1,9 +1,9 @@
 export default function Feature() {
   return (
-    <section id="whats-this" className="text-gray-600 body-font">
+    <section id="whats-this" className="text-gray-600">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-16">
-          <h1 className="sm:text-4xl text-4xl font-bold title-font text-center text-gray-900">
+          <h1 className="sm:text-4xl text-4xl font-bold text-center text-gray-900">
             What's this?
           </h1>
         </div>
