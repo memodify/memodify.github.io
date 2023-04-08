@@ -14,7 +14,8 @@ Memodify uses Monaco Editor and the APIs in order to support some features.
 
 # APIs
 ## addKeybindingRule
-[`addKeybindingRule`](https://microsoft.github.io/monaco-editor/typedoc/functions/editor.addKeybindingRule.html) is an API used to add custom keybindings to Monaco Editor.
+[`addKeybindingRule`](https://microsoft.github.io/monaco-editor/typedoc/functions/editor.addKeybindingRule.html)
+is an API used to add custom keybindings to Monaco Editor.
 The API takes an object with properties keybinding and handler,
 where keybinding is a string representing the desired key combination,
 and handler is a function to be called when the key combination is pressed.
@@ -31,7 +32,8 @@ In this example, the `command` property is a unique identifier for the keybindin
 and the `keybinding` property uses the monaco.KeyMod and monaco.KeyCode enums to define the desired key combination.
 
 ## getContribution
-[`getContribution`](https://microsoft.github.io/monaco-editor/typedoc/interfaces/editor.ICodeEditor.html#getContribution) is an API used to retrieve a contribution from Monaco Editor.
+[`getContribution`](https://microsoft.github.io/monaco-editor/typedoc/interfaces/editor.ICodeEditor.html#getContribution)
+is an API used to retrieve a contribution from Monaco Editor.
 Contributions are modules that extend the editor's functionality, such as code completion,
 syntax highlighting, and linting. The `getContribution` API takes a single parameter,
 the ID of the desired contribution, and returns the contribution object. Here's an example:
