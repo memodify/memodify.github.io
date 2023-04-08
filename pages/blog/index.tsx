@@ -66,7 +66,6 @@ type Props = {
 const postsDirectory = "./posts";
 
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
-  console.log({ params });
   const posts = fs
     .readdirSync(postsDirectory)
     .sort()
