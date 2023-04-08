@@ -9,9 +9,9 @@ export default function Hero() {
           <p className="mb-4 leading-relaxed">
             Taking notes is extremely personal, private, secret, and
             confidential. Without thinking, people may accidentally write down
-            things that they don&apos;t want others to see, such as passwords or the
-            number of their total assets. Are you sure that no one can see the
-            application you are writing in?
+            things that they don&apos;t want others to see, such as passwords or
+            the number of their total assets. Are you sure that no one can see
+            the application you are writing in?
           </p>
           <p className="mb-8 leading-relaxed">
             With Memodify, your data is stored locally. Memodify stores your
@@ -35,7 +35,12 @@ export default function Hero() {
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-          <img src="/full-screenshot.png" width="3222px" height="1766px" />
+          <img
+            src="/full-screenshot.png"
+            width="3222px"
+            height="1766px"
+            alt="hero"
+          />
         </div>
       </div>
     </section>

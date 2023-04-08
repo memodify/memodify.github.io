@@ -82,9 +82,9 @@ export default function Feature() {
           </FeatureItem>
           <FeatureItem title={"Daily Noting"} icon={svgPen}>
             <p className="leading-relaxed text-base">
-              You can continue editing a single note so that you don&apos;t
-              need creating a new file, thinking filename or title, etc.
-              It&apos;s automatically categorized, classified and grouped.
+              You can continue editing a single note so that you don&apos;t need
+              creating a new file, thinking filename or title, etc. It&apos;s
+              automatically categorized, classified and grouped.
               <br />
               (In progress)
             </p>
@@ -197,7 +197,7 @@ function FeatureRight({ title, text, imagePath }: FeatureAProps) {
         </a> */}
       </div>
       <div className="w-2/5 sm:order-none order-first sm:h-32 h-20 sm:ml-10 inline-flex items-center shrink-0">
-        <img src={imagePath} />
+        <img src={imagePath} alt="a feature" />
       </div>
     </div>
   );
@@ -207,7 +207,7 @@ function FeatureLeft({ imagePath, title, text }: FeatureAProps) {
   return (
     <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
       <div className="w-2/5 sm:h-32 h-20 sm:mr-10 inline-flex items-center justify-center shrink-0">
-        <img src={imagePath} />
+        <img src={imagePath} alt="a feature" />
       </div>
       <div className="grow sm:text-left text-center mt-6 sm:mt-0">
         <h2 className="text-gray-900 text-lg font-medium mb-2">{title}</h2>
