@@ -10,6 +10,7 @@ class MyDocument extends Document {
   }
 
   render() {
+    // https://tailwindcss.com/docs/dark-mode, https://zenn.dev/azukiazusa/articles/bee71756d66679
     return (
       <Html>
         <Head>
@@ -31,7 +32,7 @@ class MyDocument extends Document {
           />
           <meta property="og:image:alt" content="Memodify" />
         </Head>
-        <body>
+        <body className="dark:bg-gray-900">
           <Main />
           <NextScript />
         </body>
