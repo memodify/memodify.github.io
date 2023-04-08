@@ -1,14 +1,13 @@
 import type { GetStaticProps, NextPage } from "next";
 import Link from "next/link";
+import { createElement } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import FeatureList from "../contents/feature-list.mdx";
-import RemarkableFeatures from "../contents/remarkable-features.mdx";
-import GettingStarted from "../contents/getting-started.mdx";
-import Settings from "../contents/settings.mdx";
 import Advanced from "../contents/advanced.mdx";
-import { createElement } from "react";
-import { classNameCodeWithPrismjs } from "../lib/classNames";
+import FeatureList from "../contents/feature-list.mdx";
+import GettingStarted from "../contents/getting-started.mdx";
+import RemarkableFeatures from "../contents/remarkable-features.mdx";
+import Settings from "../contents/settings.mdx";
 
 // require("prismjs/themes/prism.min.css");
 // require("prismjs/themes/prism-solarizedlight.min.css");
@@ -87,7 +86,9 @@ const Main: NextPage<Props> = (props) => {
                 className={[
                   idx > 0 ? "pt-24" : null,
                   "prose",
-                  ...classNameCodeWithPrismjs,
+                  '[&_code[class^="language-"]]:text-[9pt]',
+                  '[&_code[class^="language-"]]:leading-none',
+                  '[&_pre[class^="language-"]]:leading-none',
                 ].join(" ")}
                 key={`section${idx}`}
               >
