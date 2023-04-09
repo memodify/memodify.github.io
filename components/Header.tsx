@@ -6,7 +6,9 @@ export default function Header() {
   return (
     <header
       style={{ position: "sticky", top: 0 }}
-      className={["text-gray-600", "bg-white", "dark:bg-gray-900"].join(" ")}
+      className={["text-gray-600", "bg-white", "dark:bg-gray-900", "z-50"].join(
+        " "
+      )}
     >
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <Link href="/">
