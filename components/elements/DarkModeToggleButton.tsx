@@ -12,11 +12,10 @@ export function DarkModeToggleButton() {
     >
       <div
         id="switch-toggle"
-        className={[
-          "w-6 h-6 relative rounded-full transition duration-250 transform",
-          "bg-yellow-500 -translate-x-2 p-1 text-white",
-          "dark:bg-gray-700 dark:translate-x-full",
-        ].join(" ")}
+        className="
+           w-6 h-6 relative rounded-full transition duration-250 transform
+          bg-yellow-500 -translate-x-2 p-1 text-white
+          dark:bg-gray-700 dark:translate-x-full"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

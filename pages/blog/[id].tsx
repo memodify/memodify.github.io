@@ -17,11 +17,10 @@ const Main: NextPage<Props> = (props) => {
   const Content = dynamic(() => import(`../../posts/${props.filename}`));
   return (
     <main
-      className={[
-        '[&_code[class^="language-"]]:text-[9pt]',
-        '[&_code[class^="language-"]]:leading-none',
-        '[&_pre[class^="language-"]]:leading-none',
-      ].join(" ")}
+      className='
+        [&_code[class^="language-"]]:text-[9pt]
+        [&_code[class^="language-"]]:leading-none
+        [&_pre[class^="language-"]]:leading-none'
     >
       <Content />
     </main>

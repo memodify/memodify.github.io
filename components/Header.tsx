@@ -5,10 +5,11 @@ import { DarkModeToggleButton } from "./elements/DarkModeToggleButton";
 export default function Header() {
   return (
     <header
-      style={{ position: "sticky", top: 0 }}
-      className={["text-gray-600", "bg-white", "dark:bg-gray-900", "z-50"].join(
-        " "
-      )}
+      className="text-gray-600 bg-white
+        dark:bg-gray-900
+        sticky top-0
+        z-50
+        backdrop-filter backdrop-blur-sm bg-opacity-90 dark:bg-opacity-90"
     >
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <Link href="/">

@@ -47,7 +47,7 @@ const Main: NextPage<Props> = (props) => {
       case 1:
         return ["h1", "[&:not(:nth-of-type(1))]:mt-2"];
       case 2:
-        return ["h2", "ml-3", " [&>li.h2:not(:nth-of-type(1))]:mt-2"];
+        return ["h2", "ml-3", "[&>li.h2:not(:nth-of-type(1))]:mt-2"];
       case 3:
         return ["ml-6"];
     }
@@ -83,13 +83,11 @@ const Main: NextPage<Props> = (props) => {
             .map((sec) => [createElement(sec)] as const)
             .map(([e], idx) => (
               <section
-                className={[
-                  idx > 0 ? "pt-24" : null,
-                  "prose",
-                  '[&_code[class^="language-"]]:text-[9pt]',
-                  '[&_code[class^="language-"]]:leading-none',
-                  '[&_pre[class^="language-"]]:leading-none',
-                ].join(" ")}
+                className='prose
+                  first:pt-0 pt-24
+                  [&_code[class^="language-"]]:text-[9pt]
+                  [&_code[class^="language-"]]:leading-none
+                  [&_pre[class^="language-"]]:leading-none'
                 key={`section${idx}`}
               >
                 {e}
