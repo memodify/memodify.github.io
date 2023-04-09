@@ -58,7 +58,7 @@ const Main: NextPage<Props> = (props) => {
     <>
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row text-gray-700">
         {/* Sidebar */}
-        <div className="md:w-1/5">
+        <div className="md:w-1/5 mb-10">
           <ul
             className="flex flex-col md:text-sm [&>*.h1]:font-semibold [&>li]:leading-[1.5rem]"
             style={{ position: "sticky", top: 0 }}
@@ -71,10 +71,10 @@ const Main: NextPage<Props> = (props) => {
                 key={e.id}
               />
             ))}
+            <div className="md:text-xs mt-3">
+              built at {props.meta.builtAt.toISOString()}
+            </div>
           </ul>
-          <div className="md:text-xs mt-3">
-            built at {props.meta.builtAt.toISOString()}
-          </div>
         </div>
 
         {/* Body */}
