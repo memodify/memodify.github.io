@@ -13,7 +13,7 @@ export function DarkModeToggleButton() {
       <div
         id="switch-toggle"
         className="
-           w-6 h-6 relative rounded-full transition duration-250 transform
+           w-6 h-6 relative rounded-full transition
           bg-yellow-500 -translate-x-2 p-1 text-white
           dark:bg-gray-700 dark:translate-x-full"
       >
