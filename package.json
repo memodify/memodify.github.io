@@ -16,12 +16,12 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^2",
     "@mapbox/rehype-prism": "^0.8.0",
     "@mdx-js/loader": "^2.2.1",
     "@mdx-js/react": "^2.2.1",
     "@next/mdx": "^13.1.1",
+    "@radix-ui/react-switch": "^1.0.2",
     "@svgr/webpack": "^7",
     "@tailwindcss/typography": "^0.5.8",
     "@types/mapbox__rehype-prism": "^0.8.0",
