@@ -36,7 +36,15 @@ export default function Hero() {
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
           <img
+            className="dark:hidden"
             src="/full-screenshot.png"
+            width="3222px"
+            height="1766px"
+            alt="hero"
+          />
+          <img
+            className="dark:block hidden"
+            src="/dark-mode.png"
             width="3222px"
             height="1766px"
             alt="hero"
