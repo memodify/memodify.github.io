@@ -16,6 +16,7 @@ class MyDocument extends Document {
         <Head>
           {/* https://www.webcreatorbox.com/tech/svg-favicon */}
           <link rel="icon" href="/favicon256x256.svg" type="image/svg+xml" />
+          <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
           <meta property="og:type" content="website" />
           <meta
             property="og:title"

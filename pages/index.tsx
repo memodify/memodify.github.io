@@ -10,7 +10,6 @@ import WhatsThis from "../components/WhatsThis";
 const Home: NextPage = () => {
   return (
     <>
-      <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       <Header />
       <Hero />
       <WhatsThis />
