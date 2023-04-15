@@ -4,6 +4,11 @@ export default function Hero() {
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
         <div className="lg:grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 className="sm:text-4xl text-3xl mb-4 font-bold text-gray-900 dark:text-gray-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600 dark:from-yellow-400 dark:to-yellow-600">
+              Memodify
+            </span>
+          </h1>
+          <h1 className="sm:text-4xl text-3xl mb-4 font-bold text-gray-900 dark:text-gray-300">
             Keep noting daily, personally and securely
           </h1>
           <p className="mb-4 leading-relaxed dark:text-gray-400">
