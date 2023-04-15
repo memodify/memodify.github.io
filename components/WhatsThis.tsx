@@ -3,11 +3,11 @@ export default function Feature() {
     <section id="whats-this" className="text-gray-600">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-16">
-          <h1 className="sm:text-4xl text-4xl font-bold text-center text-gray-900">
+          <h1 className="sm:text-4xl text-4xl font-bold text-center text-gray-900 dark:text-gray-50 dark:brightness-90">
             What&apos;s this?
           </h1>
         </div>
-        <div className="flex flex-col text-center">
+        <div className="flex flex-col text-center dark:brightness-150">
           <p>Memodify is a Markdown editor.</p>
           <ul className="mt-4">
             <li className="mt-4">
