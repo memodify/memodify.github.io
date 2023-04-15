@@ -15,7 +15,7 @@ export default function Header() {
         <Link href="/">
           <span className="flex font-medium items-center text-gray-900 mb-4 md:mb-0">
             <Logo width={24} height={24} />
-            <p className="ml-2 text-lg font-['Lato'] dark:text-gray-50 dark:brightness-90">Memodify</p>
+            <p className="ml-2 text-lg font-['Lato'] dark:text-gray-300">Memodify</p>
           </span>
         </Link>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center dark:brightness-150">

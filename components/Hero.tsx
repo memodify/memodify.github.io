@@ -3,7 +3,7 @@ export default function Hero() {
     <section className="text-gray-600">
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
         <div className="lg:grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className="sm:text-4xl text-3xl mb-4 font-bold text-gray-900  dark:text-gray-50 dark:brightness-90">
+          <h1 className="sm:text-4xl text-3xl mb-4 font-bold text-gray-900 dark:text-gray-300">
             Keep noting daily, personally and securely
           </h1>
           <p className="mb-4 leading-relaxed dark:brightness-150">

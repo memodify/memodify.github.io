@@ -5,10 +5,10 @@ export default function Feature() {
     <section id="feature" className="text-gray-600">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-16">
-          <h1 className="sm:text-4xl text-4xl font-bold text-center text-gray-900 mb-2 dark:text-gray-50 dark:brightness-90">
+          <h1 className="sm:text-4xl text-4xl font-bold text-center text-gray-900 mb-2 dark:text-gray-300">
             Feature
           </h1>
-          <h2 className="sm:text-2xl text-2xl font-bold text-center text-gray-900 mb-2 mt-8 dark:text-gray-50 dark:brightness-90">
+          <h2 className="sm:text-2xl text-2xl font-bold text-center text-gray-900 mb-2 mt-8 dark:text-gray-300">
             Not rich features, but enough
           </h2>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500 dark:brightness-150">
@@ -61,7 +61,7 @@ export default function Feature() {
 
         {/* ---- More Features ---- */}
         <div className="flex flex-col text-center w-full mb-8">
-          <h2 className="sm:text-2xl text-2xl font-bold text-center text-gray-900 mb-2 mt-8 dark:text-gray-50 dark:brightness-90">
+          <h2 className="sm:text-2xl text-2xl font-bold text-center text-gray-900 mb-2 mt-8 dark:text-gray-300">
             More features
           </h2>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500 dark:brightness-150">
@@ -190,7 +190,7 @@ function FeatureRight({ title, text, imagePath }: FeatureAProps) {
   return (
     <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
       <div className="grow sm:text-left text-center mt-6 sm:mt-0">
-        <h2 className="text-gray-900 text-lg font-semibold mb-2 dark:text-gray-50 dark:brightness-90">{title}</h2>
+        <h2 className="text-gray-900 text-lg font-semibold mb-2 dark:text-gray-300">{title}</h2>
         <p className="leading-relaxed text-base dark:brightness-150">{text}</p>
         {/* <a className="mt-3 text-indigo-500 inline-flex items-center">
           Learn More {svgRightArrow}
@@ -210,7 +210,7 @@ function FeatureLeft({ imagePath, title, text }: FeatureAProps) {
         <img src={imagePath} alt="a feature" className="dark:brightness-90" />
       </div>
       <div className="grow sm:text-left text-center mt-6 sm:mt-0">
-        <h2 className="text-gray-900 text-lg font-semibold mb-2 dark:text-gray-50 dark:brightness-90">{title}</h2>
+        <h2 className="text-gray-900 text-lg font-semibold mb-2 dark:text-gray-300">{title}</h2>
         <p className="leading-relaxed text-base dark:brightness-150">{text}</p>
         {/* <a className="mt-3 text-indigo-500 inline-flex items-center">
           Learn More {svgRightArrow}
@@ -227,7 +227,7 @@ function FeatureItem({ children, title, icon }: FeatureItemProps) {
         {icon}
       </div>
       <div className="grow pl-6">
-        <h2 className="text-gray-900 text-lg font-semibold mb-2 dark:text-gray-50 dark:brightness-90">{title}</h2>
+        <h2 className="text-gray-900 text-lg font-semibold mb-2 dark:text-gray-300">{title}</h2>
         <div className="dark:brightness-150">{children}</div>
       </div>
     </div>

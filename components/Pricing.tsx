@@ -3,7 +3,7 @@ export default function Pricing() {
     <section id="pricing" className="text-gray-600 overflow-hidden">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-8">
-          <h1 className="sm:text-4xl text-3xl font-bold mb-2 text-gray-900 dark:text-gray-50 dark:brightness-90">
+          <h1 className="sm:text-4xl text-3xl font-bold mb-2 text-gray-900 dark:text-gray-300">
             Pricing
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500 dark:brightness-150">
@@ -53,7 +53,7 @@ function PricingCard(props: PricingCardProps) {
         <h2 className="text-sm tracking-widest mb-1 font-medium dark:brightness-150">
           {subheader}
         </h2>
-        <h1 className="text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none dark:text-gray-50 dark:brightness-90">
+        <h1 className="text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none dark:text-gray-300">
           {header}
         </h1>
         <div className="dark:brightness-150">{children}</div>

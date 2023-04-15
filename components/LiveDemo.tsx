@@ -6,7 +6,7 @@ export function LiveDemo() {
     <section id="live-demo" className="text-gray-600">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-8">
-          <h1 className="sm:text-3xl text-2xl font-bold text-gray-900 mb-2 dark:text-gray-50 dark:brightness-90">
+          <h1 className="sm:text-3xl text-2xl font-bold text-gray-900 mb-2 dark:text-gray-300">
             Live Demo
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500 dark:brightness-150">

@@ -26,7 +26,7 @@ const Main: NextPage<Props> = (props) => {
   };
   return (
     <article className="container mx-auto px-5 prose">
-      <h1 className=" dark:text-gray-50 dark:brightness-90">Blog</h1>
+      <h1 className=" dark:text-gray-300">Blog</h1>
       <section>
         <ul>
           {props.posts.map((e) => {
