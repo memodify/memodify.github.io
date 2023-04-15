@@ -12,14 +12,28 @@ type PageLayoutProps = {
  * Take a look at https://tailwindcss.com/docs/height also.
  */
 
-export default function BlogEntryLayout({ children, frontmatter }: PageLayoutProps) {
+export default function BlogEntryLayout({
+  children,
+  frontmatter,
+}: PageLayoutProps) {
   return (
     <div className="min-h-screen px-5">
       <Header />
       <main className="prose mx-auto">
-        <h1>{frontmatter.title}</h1>
-        <div className="flex justify-end">{frontmatter.created_at}</div>
-        <article>{children}</article>
+        <h1 className="dark:text-gray-300">{frontmatter.title}</h1>
+        <div className="flex justify-end dark:text-gray-400">
+          {frontmatter.created_at}
+        </div>
+        <article
+          className="[&_h1]:dark:text-gray-300
+                     [&_h2]:dark:text-gray-300
+                     [&_code]:dark:text-gray-300
+                     [&_a]:dark:text-gray-400
+                     dark:text-gray-400
+                     "
+        >
+          {children}
+        </article>
       </main>
       <div className="sticky top-[100vh]">
         <Footer />
