@@ -16,11 +16,11 @@ require("prismjs/themes/prism-tomorrow.min.css");
 
 const Docs: NextPage<Props> = (props) => {
   return (
-    <>
+    <div id="docs">
       <Header />
       <Main {...props} />
       <Footer />
-    </>
+    </div>
   );
 };
 
@@ -65,7 +65,7 @@ const Main: NextPage<Props> = (props) => {
         >
           <ul
             className="flex flex-col md:text-sm [&>*.h1]:font-semibold [&>li]:leading-[1.5rem]"
-            style={{ position: "sticky", top: 0 }}
+            style={{ position: "sticky", top: "72px" /* header height */ }}
           >
             {items.map((e) => (
               <ListItem
