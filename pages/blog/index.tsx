@@ -26,7 +26,7 @@ const Main: NextPage<Props> = (props) => {
   };
   return (
     <article className="container mx-auto px-5 prose">
-      <h1>Blog</h1>
+      <h1 className=" dark:text-gray-50 dark:brightness-90">Blog</h1>
       <section>
         <ul>
           {props.posts.map((e) => {
@@ -36,10 +36,13 @@ const Main: NextPage<Props> = (props) => {
             return (
               <li key={e.id}>
                 <span
+                  className="dark:text-gray-500"
                   style={{ display: "flex", justifyContent: "space-between" }}
                 >
-                  <a href={toLink(e.id)}>{e.title}</a>
-                  {e.created_at}
+                  <a className="dark:text-gray-500" href={toLink(e.id)}>
+                    {e.title}
+                  </a>
+                  <span>{e.created_at}</span>
                 </span>
               </li>
             );
