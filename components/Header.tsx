@@ -19,22 +19,22 @@ export default function Header() {
           </span>
         </Link>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center dark:brightness-150">
-          <Link href="/#whats-this" className="mr-5 hover:text-gray-900">
+          <Link href="/#whats-this" className="mr-5 hover:text-gray-900 hover:dark:text-gray-500">
             What&apos;s this
           </Link>
-          <Link href="/#feature" className="mr-5 hover:text-gray-900">
+          <Link href="/#feature" className="mr-5 hover:text-gray-900 hover:dark:text-gray-500">
             Feature
           </Link>
-          <Link href="/#live-demo" className="mr-5 hover:text-gray-900">
+          <Link href="/#live-demo" className="mr-5 hover:text-gray-900 hover:dark:text-gray-500">
             Live Demo
           </Link>
-          <Link href="/#pricing" className="mr-5 hover:text-gray-900">
+          <Link href="/#pricing" className="mr-5 hover:text-gray-900 hover:dark:text-gray-500">
             Pricing
           </Link>
-          <Link href="/docs" className="mr-5">
+          <Link href="/docs" className="mr-5 hover:dark:text-gray-500">
             Docs
           </Link>
-          <Link href="/blog" className="mr-5">
+          <Link href="/blog" className="mr-5 hover:dark:text-gray-500">
             Blog
           </Link>
           <a
