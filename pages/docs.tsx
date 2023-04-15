@@ -58,7 +58,11 @@ const Main: NextPage<Props> = (props) => {
     <>
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row text-gray-700">
         {/* Sidebar */}
-        <div className="md:w-1/5 mb-10">
+        <div
+          className="md:w-1/5 mb-10
+                     [&_*]:dark:text-gray-500
+                     "
+        >
           <ul
             className="flex flex-col md:text-sm [&>*.h1]:font-semibold [&>li]:leading-[1.5rem]"
             style={{ position: "sticky", top: 0 }}
@@ -87,7 +91,14 @@ const Main: NextPage<Props> = (props) => {
                   first:pt-0 pt-24
                   [&_code[class^="language-"]]:text-[9pt]
                   [&_code[class^="language-"]]:leading-none
-                  [&_pre[class^="language-"]]:leading-none'
+                  [&_pre[class^="language-"]]:leading-none
+                  [&_*]:dark:text-gray-500
+                  [&_summary]:dark:text-gray-400
+                  [&_h1]:dark:text-gray-300
+                  [&_h2]:dark:text-gray-300
+                  [&_h3]:dark:text-gray-300
+                  [&_p>code]:dark:text-gray-300
+                  '
                 key={`section${idx}`}
               >
                 {e}
