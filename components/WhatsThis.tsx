@@ -7,7 +7,7 @@ export default function Feature() {
             What&apos;s this?
           </h1>
         </div>
-        <div className="flex flex-col text-center dark:brightness-150">
+        <div className="flex flex-col text-center dark:text-gray-400">
           <p>Memodify is a Markdown editor.</p>
           <ul className="mt-4">
             <li className="mt-4">

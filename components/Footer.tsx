@@ -17,7 +17,7 @@ export default function Footer() {
           </svg> */}
           <p className="ml-3 text-xl font-['Lato'] dark:text-gray-300">Memodify</p>
         </a>
-        <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4 dark:brightness-150">
+        <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4 dark:text-gray-400">
           © 2022 Tomotaka Sakuma —
           <a
             href="https://twitter.com/tmtk75"
@@ -28,7 +28,7 @@ export default function Footer() {
             @tmtk75
           </a>
         </p>
-        <p className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start dark:brightness-150">
+        <p className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start dark:text-gray-400">
           <a
             className="text-gray-500"
             href="https://github.com/memodify"

@@ -9,7 +9,7 @@ export function LiveDemo() {
           <h1 className="sm:text-3xl text-2xl font-bold text-gray-900 mb-2 dark:text-gray-300">
             Live Demo
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500 dark:brightness-150">
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500 dark:text-gray-400">
             You can try power of MDX.
           </p>
         </div>

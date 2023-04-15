@@ -11,7 +11,7 @@ export default function Feature() {
           <h2 className="sm:text-2xl text-2xl font-bold text-center text-gray-900 mb-2 mt-8 dark:text-gray-300">
             Not rich features, but enough
           </h2>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500 dark:brightness-150">
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500 dark:text-gray-400">
             Simple is best!
           </p>
         </div>
@@ -64,7 +64,7 @@ export default function Feature() {
           <h2 className="sm:text-2xl text-2xl font-bold text-center text-gray-900 mb-2 mt-8 dark:text-gray-300">
             More features
           </h2>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500 dark:brightness-150">
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500 dark:text-gray-400">
             There are some features you are familiar with.
           </p>
         </div>
@@ -191,7 +191,7 @@ function FeatureRight({ title, text, imagePath }: FeatureAProps) {
     <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
       <div className="grow sm:text-left text-center mt-6 sm:mt-0">
         <h2 className="text-gray-900 text-lg font-semibold mb-2 dark:text-gray-300">{title}</h2>
-        <p className="leading-relaxed text-base dark:brightness-150">{text}</p>
+        <p className="leading-relaxed text-base dark:text-gray-400">{text}</p>
         {/* <a className="mt-3 text-indigo-500 inline-flex items-center">
           Learn More {svgRightArrow}
         </a> */}
@@ -211,7 +211,7 @@ function FeatureLeft({ imagePath, title, text }: FeatureAProps) {
       </div>
       <div className="grow sm:text-left text-center mt-6 sm:mt-0">
         <h2 className="text-gray-900 text-lg font-semibold mb-2 dark:text-gray-300">{title}</h2>
-        <p className="leading-relaxed text-base dark:brightness-150">{text}</p>
+        <p className="leading-relaxed text-base dark:text-gray-400">{text}</p>
         {/* <a className="mt-3 text-indigo-500 inline-flex items-center">
           Learn More {svgRightArrow}
         </a> */}
@@ -228,7 +228,7 @@ function FeatureItem({ children, title, icon }: FeatureItemProps) {
       </div>
       <div className="grow pl-6">
         <h2 className="text-gray-900 text-lg font-semibold mb-2 dark:text-gray-300">{title}</h2>
-        <div className="dark:brightness-150">{children}</div>
+        <div className="dark:text-gray-400">{children}</div>
       </div>
     </div>
   );

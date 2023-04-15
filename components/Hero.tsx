@@ -6,14 +6,14 @@ export default function Hero() {
           <h1 className="sm:text-4xl text-3xl mb-4 font-bold text-gray-900 dark:text-gray-300">
             Keep noting daily, personally and securely
           </h1>
-          <p className="mb-4 leading-relaxed dark:brightness-150">
+          <p className="mb-4 leading-relaxed dark:text-gray-400">
             Taking notes is extremely personal, private, secret, and
             confidential. Without thinking, people may accidentally write down
             things that they don&apos;t want others to see, such as passwords or
             the number of their total assets. Are you sure that no one can see
             the application you are writing in?
           </p>
-          <p className="mb-8 leading-relaxed dark:brightness-150">
+          <p className="mb-8 leading-relaxed dark:text-gray-400">
             With Memodify, your data is stored locally. Memodify stores your
             data locally and does not have the ability to share it with others.
             There are no plug-ins, nothing. You can write whatever you want.

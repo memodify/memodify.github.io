@@ -18,7 +18,7 @@ export default function Header() {
             <p className="ml-2 text-lg font-['Lato'] dark:text-gray-300">Memodify</p>
           </span>
         </Link>
-        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center dark:brightness-150">
+        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center dark:text-gray-400">
           <Link href="/#whats-this" className="mr-5 hover:text-gray-900 hover:dark:text-gray-500">
             What&apos;s this
           </Link>
