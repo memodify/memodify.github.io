@@ -49,7 +49,7 @@ function PricingCard(props: PricingCardProps) {
   const { subheader, header, footer, children } = props;
   return (
     <div className="p-4 md:w-1/2 w-full">
-      <div className="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden dr">
+      <div className="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
         <h2 className="text-sm tracking-widest mb-1 font-medium dark:text-gray-400">
           {subheader}
         </h2>
