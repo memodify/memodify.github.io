@@ -46,13 +46,15 @@ export default function Hero() {
             width="3222px"
             height="1766px"
             alt="hero"
+            loading="lazy"
           />
           <img
             className="dark:block hidden"
             src="/dark-mode.png"
             width="3222px"
             height="1766px"
-            alt="hero"
+            alt="hero-dark"
+            loading="lazy"
           />
         </div>
       </div>
