@@ -19,6 +19,7 @@ export function LiveDemo() {
             width="100%"
             height={`${240 * 2 + 8 * 2}px`} // 240 is the height of /demp/editor-preview. 8 is body's margin of iframe.
             style={{ border: "none", margin: 0, padding: 0 }}
+            loading="lazy"
           />
         </div>
         <p className="text-gray-400 text-left text-sm">
