@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section className="text-gray-600">
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-        <div className="lg:grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <div className="lg:grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left sm:mb-16 md:mb-0 items-center text-center">
           <h1 className="sm:text-4xl text-3xl mb-4 font-bold text-gray-900 dark:text-gray-300">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600 dark:from-yellow-400 dark:to-yellow-600">
               Memodify
@@ -23,7 +23,7 @@ export default function Hero() {
             data locally and does not have the ability to share it with others.
             There are no plug-ins, nothing. You can write whatever you want.
           </p>
-          <div className="flex justify-center">
+          <div className="flex justify-center hidden sm:block">
             <button className="mr-1 inline-flex text-white bg-yellow-500 hover:bg-yellow-600 hover:drop-shadow-md border-0 py-2 px-6 focus:outline-none rounded text-lg items-center dark:brightness-90">
               <a
                 href="//github.com/memodify/memodify.github.io/releases"
@@ -39,7 +39,7 @@ export default function Hero() {
             </button>
           </div>
         </div>
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <div className="lg:max-w-lg lg:w-full md:w-1/2 sm:w-5/6">
           <img
             className="dark:hidden"
             src="/full-screenshot.png"

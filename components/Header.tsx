@@ -12,11 +12,21 @@ export default function Header() {
         backdrop-blur-sm"
     >
       {HeaderLg}
-      <div className="sm:hidden flex flex-wrap container mx-auto p-5 flex-row justify-end items-center">
-        <Link href="/docs" className="mr-5 hover:dark:text-gray-500">
-          Docs
+      <div className="sm:hidden flex flex-wrap container mx-auto p-5 flex-row justify-between items-center">
+        <Link href="/">
+          <span className="flex">
+            <Logo width={24} height={24} />
+            <p className="ml-2 text-lg font-['Lato'] dark:text-gray-300">
+              Memodify
+            </p>
+          </span>
         </Link>
-        <DarkModeToggleButton />
+        <nav className="flex">
+          <Link href="/docs" className="mr-5 hover:dark:text-gray-500">
+            Docs
+          </Link>
+          <DarkModeToggleButton />
+        </nav>
       </div>
     </header>
   );
