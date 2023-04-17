@@ -196,8 +196,8 @@ function FeatureRight({ title, text, imagePath }: FeatureAProps) {
           Learn More {svgRightArrow}
         </a> */}
       </div>
-      <div className="w-2/5 sm:order-none order-first sm:h-32 h-20 sm:ml-10 inline-flex items-center shrink-0">
-        <img src={imagePath} alt="a feature" className="dark:brightness-75" loading="lazy" />
+      <div className="sm:w-2/5 sm:order-none order-first sm:h-32 sm:ml-10 inline-flex items-center shrink-0">
+        <img src={imagePath} alt="a feature" className="dark:brightness-75 px-5" loading="lazy" />
       </div>
     </div>
   );
@@ -206,8 +206,8 @@ function FeatureRight({ title, text, imagePath }: FeatureAProps) {
 function FeatureLeft({ imagePath, title, text }: FeatureAProps) {
   return (
     <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-      <div className="w-2/5 sm:h-32 h-20 sm:mr-10 inline-flex items-center justify-center shrink-0">
-        <img src={imagePath} alt="a feature" className="dark:brightness-90" loading="lazy" />
+      <div className="sm:w-2/5 sm:h-32 sm:mr-10 inline-flex items-center justify-center shrink-0">
+        <img src={imagePath} alt="a feature" className="dark:brightness-90 px-5" loading="lazy" />
       </div>
       <div className="grow sm:text-left text-center mt-6 sm:mt-0">
         <h2 className="text-gray-900 text-lg font-semibold mb-2 dark:text-gray-300">{title}</h2>
