@@ -23,7 +23,7 @@ export function LiveDemo() {
             </button>
           </p>
         </div>
-        <div className="flex flex-wrap -m-4 hidden sm:block">
+        <div className="flex-wrap -m-4 hidden sm:flex">
           <iframe
             src={livedemoURL}
             width="100%"

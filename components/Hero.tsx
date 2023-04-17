@@ -23,7 +23,7 @@ export default function Hero() {
             data locally and does not have the ability to share it with others.
             There are no plug-ins, nothing. You can write whatever you want.
           </p>
-          <div className="flex justify-center hidden sm:block">
+          <div className="justify-center hidden sm:flex">
             <button className="mr-1 inline-flex text-white bg-yellow-500 hover:bg-yellow-600 hover:drop-shadow-md border-0 py-2 px-6 focus:outline-none rounded text-lg items-center dark:brightness-90">
               <a
                 href="//github.com/memodify/memodify.github.io/releases"
