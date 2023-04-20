@@ -171,7 +171,7 @@ const HeaderSm = (
             ] as const
           ).map(([href, label]) => {
             return (
-              <li className="pb-4">
+              <li className="pb-4" key={label}>
                 <Link href={href} onClick={closeDrawer}>
                   {label}
                 </Link>
