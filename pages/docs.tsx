@@ -64,8 +64,8 @@ const Main: NextPage<Props> = (props) => {
                      "
         >
           <ul
-            className="flex flex-col md:text-sm [&>*.h1]:font-semibold [&>li]:leading-[1.5rem]"
-            style={{ position: "sticky", top: "72px" /* header height */ }}
+            className="flex flex-col md:text-sm [&>*.h1]:font-semibold [&>li]:leading-[1.5rem]
+            sticky top-16"
           >
             {items.map((e) => (
               <ListItem

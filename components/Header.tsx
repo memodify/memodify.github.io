@@ -9,6 +9,7 @@ export default function Header() {
         dark:bg-gray-900/90
         sticky top-0
         z-50
+        h-16
         backdrop-blur-sm"
     >
       {HeaderLg}
