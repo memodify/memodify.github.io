@@ -123,9 +123,9 @@ const HeadingLinks = (props: Props) => {
   const toCNs = (level: number): string[] => {
     switch (level) {
       case 1:
-        return ["h1", "[&:not(:nth-of-type(1))]:mt-2"];
+        return ["h1"];
       case 2:
-        return ["h2", "ml-3", "[&>li.h2:not(:nth-of-type(1))]:mt-2"];
+        return ["h2", "ml-3"];
       case 3:
         return ["ml-6"];
     }
@@ -139,9 +139,10 @@ const HeadingLinks = (props: Props) => {
         px-12 sm:px-0
         pb-12 sm:pb-0
 
-        [&>li:not(:nth-of-type(1))]:pt-4 sm:[&>li:not(:nth-of-type(1))]:pt-2
-
         sm:sticky sm:top-16
+
+           first:[&>li]:pt-0    [&>li]:pt-4
+        sm:first:[&>li]:pt-0 sm:[&>li]:pt-2
 
         [&>.h1]:font-semibold
         [&>li]:leading-[1.5rem]
