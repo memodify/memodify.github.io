@@ -128,8 +128,8 @@ const HeadingLinks = () => {
     sticky top-16"
     >
       {items.map((e) => (
-        <li className={toCNs(e.level).join(" ")}>
-          <Link href={`#${e.id}`} key={e.id} onClick={closeLeftDrawer}>
+        <li className={toCNs(e.level).join(" ")} key={e.id}>
+          <Link href={`#${e.id}`} onClick={closeLeftDrawer}>
             {e.text}
           </Link>
         </li>
