@@ -29,50 +29,56 @@ const Docs: NextPage<Props> = (props) => {
   );
 };
 
-const Main: NextPage<Props> = () => {
-  return (
-    <>
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row text-gray-700">
-        {/* Sidebar */}
-        <div
-          className="
-            hidden
-            md:block
-            md:w-1/5 mb-10
-          [&_*]:dark:text-gray-500
-            "
-        >
-          <HeadingLinks />
-        </div>
+const Main: NextPage<Props> = () => (
+  <div
+    className="
+      container
+      mx-auto
+      flex flex-wrap
+      p-5
+      flex-col md:flex-row
+      text-gray-700
+      "
+  >
+    {/* Sidebar */}
+    <div
+      className="
+        hidden
+        md:block
+        md:w-1/5 mb-10
+         [&_*]:dark:text-gray-500
+        "
+    >
+      <HeadingLinks />
+    </div>
 
-        {/* Body */}
-        <div className="md:w-4/5">
-          {sections
-            .map((sec) => [createElement(sec)] as const)
-            .map(([e], idx) => (
-              <section
-                className='prose
-                  first:pt-0 pt-24
-                  [&_code[class^="language-"]]:text-[9pt]
-                  [&_code[class^="language-"]]:leading-none
-                  [&_pre[class^="language-"]]:leading-none
-                  [&_*]:dark:text-gray-500
-                  [&_summary]:dark:text-gray-400
-                  [&_h1]:dark:text-gray-300
-                  [&_h2]:dark:text-gray-300
-                  [&_h3]:dark:text-gray-300
-                  [&_p>code]:dark:text-gray-300
-                  '
-                key={`section${idx}`}
-              >
-                {e}
-              </section>
-            ))}
-        </div>
-      </div>
-    </>
-  );
-};
+    {/* Body */}
+    <div className="md:w-4/5">
+      {sections
+        .map((sec) => [createElement(sec)] as const)
+        .map(([e], idx) => (
+          <section
+            className='
+              prose
+              first:pt-0 pt-24
+              [&_code[class^="language-"]]:text-[9pt]
+              [&_code[class^="language-"]]:leading-none
+              [&_pre[class^="language-"]]:leading-none
+              [&_*]:dark:text-gray-500
+              [&_summary]:dark:text-gray-400
+              [&_h1]:dark:text-gray-300
+              [&_h2]:dark:text-gray-300
+              [&_h3]:dark:text-gray-300
+              [&_p>code]:dark:text-gray-300
+              '
+            key={`section${idx}`}
+          >
+            {e}
+          </section>
+        ))}
+    </div>
+  </div>
+);
 
 export default Docs;
 
@@ -124,8 +130,13 @@ const HeadingLinks = () => {
 
   return (
     <ul
-      className="flex flex-col md:text-sm [&>*.h1]:font-semibold [&>li]:leading-[1.5rem]
-    sticky top-16"
+      className="
+        flex flex-col
+        md:text-sm
+        [&>*.h1]:font-semibold
+        [&>li]:leading-[1.5rem]
+        sticky top-16
+        "
     >
       {items.map((e) => (
         <li className={toCNs(e.level).join(" ")} key={e.id}>
