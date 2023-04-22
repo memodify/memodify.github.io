@@ -35,10 +35,7 @@ const Main: NextPage<Props> = (props) => {
             }
             return (
               <li key={e.id}>
-                <span
-                  className="dark:text-gray-500"
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                >
+                <span className="dark:text-gray-500 flex justify-between">
                   <a className="dark:text-gray-500" href={toLink(e.id)}>
                     {e.title}
                   </a>

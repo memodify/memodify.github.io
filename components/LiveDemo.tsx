@@ -26,9 +26,7 @@ export function LiveDemo() {
         <div className="flex-wrap -m-4 hidden sm:flex">
           <iframe
             src={livedemoURL}
-            width="100%"
-            height={`${240 * 2 + 8 * 2}px`} // 240 is the height of /demp/editor-preview. 8 is body's margin of iframe.
-            style={{ border: "none", margin: 0, padding: 0 }}
+            className="border-none m-0 p-0 w-full h-[496px]" // height={`${240 * 2 + 8 * 2}px`} // 240 is the height of /demp/editor-preview. 8 is body's margin of iframe.
             loading="lazy"
           />
         </div>
