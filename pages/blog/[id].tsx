@@ -5,7 +5,7 @@ require("prismjs/themes/prism-tomorrow.min.css");
 
 const Page: NextPage<Props> = (props) => {
   return (
-    <div id="blog-page">
+    <div id="blog-entry-page">
       <Main {...props} />
     </div>
   );

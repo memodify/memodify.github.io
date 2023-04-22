@@ -109,15 +109,20 @@ const HeaderSm = (
   <>
     <div
       className="
-        sm:hidden flex flex-wrap container mx-auto p-5 flex-row
-        justify-between [#blog-page_&]:justify-end
-        items-center
+        sm:hidden
+        flex flex-wrap container mx-auto flex-row
+        p-5 [#blog-entry-page_&]:px-0
+        justify-between items-center
+        [#blog-page_&]:justify-end
+        [#blog-entry-page_&]:justify-end
         "
     >
       <label
         htmlFor="left-drawer-toggle-state"
-        className="[#blog-page_&]:hidden
-      "
+        className="
+          [#blog-page_&]:hidden
+          [#blog-entry-page_&]:hidden
+          "
       >
         {iconBar4}
       </label>
