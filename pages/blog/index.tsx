@@ -33,11 +33,15 @@ const Main: NextPage<Props> = (props) => {
             }
             return (
               <li key={e.id}>
-                <span className="dark:text-gray-500 flex justify-between">
-                  <a className="dark:text-gray-500" href={toLink(e.id)}>
-                    {e.title}
-                  </a>
-                  <span>{e.created_at}</span>
+                <span
+                  className="
+                        flex
+                        flex-col sm:flex-row
+                        justify-between
+                        dark:text-gray-500"
+                >
+                  <a href={toLink(e.id)}>{e.title}</a>
+                  <span className="text-sm">{e.created_at}</span>
                 </span>
               </li>
             );

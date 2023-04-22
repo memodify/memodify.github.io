@@ -34,7 +34,7 @@ const Main: NextPage<Props> = (props: Props) => (
     className="
       container mx-auto
       flex flex-wrap
-      flex-col md:flex-row
+      flex-col sm:flex-row
       p-5
       text-gray-700
       "
@@ -43,8 +43,8 @@ const Main: NextPage<Props> = (props: Props) => (
     <div
       className="
         hidden
-        md:block
-        sm:w-1/5
+        sm:block
+        sm:w-2/5 md:w-1/3 lg:w-1/4
          [&_*]:dark:text-gray-500
         "
     >
@@ -54,7 +54,8 @@ const Main: NextPage<Props> = (props: Props) => (
     {/* Body */}
     <div
       className="
-        w-full sm:w-4/5
+        w-full
+        sm:w-3/5 md:w-2/3 lg:3/4
         "
     >
       {sections
