@@ -39,6 +39,8 @@ const Main: NextPage<Props> = (props) => {
                     flex-col sm:flex-row
                     justify-between
                     dark:text-gray-500
+                    dark:[&_a]:text-gray-400
+                    [&_a]:no-underline
                     "
                 >
                   <a href={toLink(e.id)}>{e.title}</a>
