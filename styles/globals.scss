@@ -30,15 +30,6 @@ a {
 //
 // Control scroll-padding-top by clicking anchors on the header and the menu.
 //
-:root {
-  --header-height: 72px;
-}
-
-html:has(#docs) {
-  // https://speakerdeck.com/tonkotsuboy_com/2023nian-modancssnozui-xin-torendo?slide=40
-  scroll-padding-top: var(--header-height); // header height
-}
-
 /*
  * https://tailwindcss.com/docs/responsive-design
  * sm	640px	@media (min-width: 640px) { ... }
@@ -47,11 +38,20 @@ html:has(#docs) {
  * xl	1280px	@media (min-width: 1280px) { ... }
  * 2xl	1536px	@media (min-width: 1536px) { ... }
  */
+:root {
+  --header-height: 72px;
+}
+
+html:has(#docs-page) {
+  // https://speakerdeck.com/tonkotsuboy_com/2023nian-modancssnozui-xin-torendo?slide=40
+  scroll-padding-top: var(--header-height); // header height
+}
+
 @media (768px <= width < 1024px) {
   html {
     scroll-padding-top: calc(100px - var(--header-height));
   }
-  html:has(#docs) {
+  html:has(#docs-page) {
     scroll-padding-top: 100px; // header height
   }
 }
@@ -60,7 +60,7 @@ html:has(#docs) {
   html {
     scroll-padding-top: calc(156px - var(--header-height));
   }
-  html:has(#docs) {
+  html:has(#docs-page) {
     scroll-padding-top: 156px; // header height
   }
 }

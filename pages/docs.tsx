@@ -8,6 +8,7 @@ import FeatureList from "../contents/feature-list.mdx";
 import GettingStarted from "../contents/getting-started.mdx";
 import RemarkableFeatures from "../contents/remarkable-features.mdx";
 import Settings from "../contents/settings.mdx";
+import { LeftDrawer, closeLeftDrawer } from "../components/elements/LeftDrawer";
 
 // require("prismjs/themes/prism.min.css");
 // require("prismjs/themes/prism-solarizedlight.min.css");
@@ -16,69 +17,32 @@ require("prismjs/themes/prism-tomorrow.min.css");
 
 const Docs: NextPage<Props> = (props) => {
   return (
-    <div id="docs">
+    // NOTE: docs-page is needed for scroll-padding defined in globals.css
+    <div id="docs-page">
       <Header />
       <Main {...props} />
       <Footer />
+      <LeftDrawer>
+        <HeadingLinks />
+      </LeftDrawer>
     </div>
   );
 };
 
-const sections = [
-  GettingStarted,
-  RemarkableFeatures,
-  Settings,
-  Advanced,
-  FeatureList,
-] as const;
-
-const Main: NextPage<Props> = (props) => {
-  const children = sections.map((f) => f({}).props.children).flat();
-  const items = children
-    .filter((e) => e.type.match)
-    .filter((e) => e.type.match(/^h[1-6]$/))
-    .map((e) => ({
-      level: (() => parseInt(e.type.match(/^h([1-6])$/)[1]))(),
-      id: e.props.id,
-      text: e.props.children,
-    }));
-  const toCNs = (level: number): string[] => {
-    switch (level) {
-      case 1:
-        return ["h1", "[&:not(:nth-of-type(1))]:mt-2"];
-      case 2:
-        return ["h2", "ml-3", "[&>li.h2:not(:nth-of-type(1))]:mt-2"];
-      case 3:
-        return ["ml-6"];
-    }
-    return [];
-  };
-
+const Main: NextPage<Props> = () => {
   return (
     <>
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row text-gray-700">
         {/* Sidebar */}
         <div
-          className="md:w-1/5 mb-10
-                     [&_*]:dark:text-gray-500
-                     "
+          className="
+            hidden
+            md:block
+            md:w-1/5 mb-10
+          [&_*]:dark:text-gray-500
+            "
         >
-          <ul
-            className="flex flex-col md:text-sm [&>*.h1]:font-semibold [&>li]:leading-[1.5rem]
-            sticky top-16"
-          >
-            {items.map((e) => (
-              <ListItem
-                id={e.id}
-                value={e.text}
-                className={toCNs(e.level).join(" ")}
-                key={e.id}
-              />
-            ))}
-            <div className="md:text-xs mt-3">
-              built at {props.meta.builtAt.toISOString()}
-            </div>
-          </ul>
+          <HeadingLinks />
         </div>
 
         {/* Body */}
@@ -128,21 +92,48 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-type ListItemProps = {
-  id: string;
-  value: string;
-  className?: string;
-  children?: JSX.Element;
-};
+const sections = [
+  GettingStarted,
+  RemarkableFeatures,
+  Settings,
+  Advanced,
+  FeatureList,
+] as const;
 
-function ListItem(props: ListItemProps) {
-  const { value, id, className, children } = props;
+const HeadingLinks = () => {
+  const children = sections.map((f) => f({}).props.children).flat();
+  const items = children
+    .filter((e) => e.type.match)
+    .filter((e) => e.type.match(/^h[1-6]$/))
+    .map((e) => ({
+      level: (() => parseInt(e.type.match(/^h([1-6])$/)[1]))(),
+      id: e.props.id,
+      text: e.props.children,
+    }));
+  const toCNs = (level: number): string[] => {
+    switch (level) {
+      case 1:
+        return ["h1", "[&:not(:nth-of-type(1))]:mt-2"];
+      case 2:
+        return ["h2", "ml-3", "[&>li.h2:not(:nth-of-type(1))]:mt-2"];
+      case 3:
+        return ["ml-6"];
+    }
+    return [];
+  };
+
   return (
-    <li className={className}>
-      <Link href={`#${id}`}>
-        {value}
-        {children}
-      </Link>
-    </li>
+    <ul
+      className="flex flex-col md:text-sm [&>*.h1]:font-semibold [&>li]:leading-[1.5rem]
+    sticky top-16"
+    >
+      {items.map((e) => (
+        <li className={toCNs(e.level).join(" ")}>
+          <Link href={`#${e.id}`} key={e.id} onClick={closeLeftDrawer}>
+            {e.text}
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
-}
+};

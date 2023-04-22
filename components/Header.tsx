@@ -8,7 +8,7 @@ export default function Header() {
       className="text-gray-600 bg-white/90
         dark:bg-gray-900/90
         sticky top-0
-        z-50
+        z-10
         h-16
         backdrop-blur-sm"
     >
@@ -107,80 +107,16 @@ const iconBar4 = (
   </svg>
 );
 
-const iconXMark = (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    strokeWidth={1.5}
-    stroke="currentColor"
-    className="w-6 h-6"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M6 18L18 6M6 6l12 12"
-    />
-  </svg>
-);
-
-const closeDrawer = () => {
-  const checkbox = document.getElementById("drawer-toggle-state");
-  (checkbox as any).checked = false;
-};
-
 const HeaderSm = (
   <>
     <div className="sm:hidden flex flex-wrap container mx-auto p-5 flex-row justify-between items-center">
-      <label htmlFor="drawer-toggle-state">{iconBar4}</label>
+      <label htmlFor="left-drawer-toggle-state">{iconBar4}</label>
       <nav className="flex">
         <Link href="/docs" className="mr-5 hover:dark:text-gray-500">
           Docs
         </Link>
         <DarkModeToggleButton />
       </nav>
-    </div>
-    <div className="">
-      {/* NOTE: This `input` must be here since this has `peer` class of tailwindcss */}
-      <input id="drawer-toggle-state" type="checkbox" className="peer hidden" />
-      <div
-        className="w-3/5
-    bg-white dark:bg-gray-800
-    fixed top-0 left-0
-    p-2
-    h-screen
-    opacity-95
-    peer-checked:translate-x-0
-    transition-transform
-    -translate-x-full
-    duration-300"
-      >
-        <div>
-          <label htmlFor="drawer-toggle-state" className="flex justify-end">
-            {iconXMark}
-          </label>
-        </div>
-        <ul className="p-4">
-          {(
-            [
-              ["/", "Home"],
-              ["/#whats-this", "What's this"],
-              ["/#feature", "Feature"],
-              ["/#live-demo", "Live Demo"],
-              ["/#pricing", "Pricing"],
-              ["/blog/", "Blog"],
-            ] as const
-          ).map(([href, label]) => {
-            return (
-              <li className="pb-4" key={label}>
-                <Link href={href} onClick={closeDrawer}>
-                  {label}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
     </div>
   </>
 );
