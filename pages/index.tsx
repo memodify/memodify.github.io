@@ -31,6 +31,7 @@ const HeadingLines = () => (
     className="
       px-12
       [&>li:not(:nth-of-type(1))]:pt-4
+      [&_*]:dark:text-gray-400
       "
   >
     {(

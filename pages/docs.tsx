@@ -146,6 +146,8 @@ const HeadingLinks = (props: Props) => {
 
         [&>.h1]:font-semibold
         [&>li]:leading-[1.5rem]
+
+        [&_*]:dark:text-gray-400
         "
     >
       {items.map((e) => (

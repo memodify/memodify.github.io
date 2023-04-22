@@ -47,6 +47,7 @@ export const LeftDrawer = ({ children }: { children: JSX.Element }) => (
              h-16 flex
              justify-end items-center
              px-2
+             dark:text-gray-400
              ">
         <label htmlFor="left-drawer-toggle-state">{iconChevronLeft}</label>
       </div>
