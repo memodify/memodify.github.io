@@ -32,11 +32,10 @@ const Docs: NextPage<Props> = (props) => {
 const Main: NextPage<Props> = (props: Props) => (
   <div
     className="
-      container
-      mx-auto
+      container mx-auto
       flex flex-wrap
-      p-5
       flex-col md:flex-row
+      p-5
       text-gray-700
       "
   >
