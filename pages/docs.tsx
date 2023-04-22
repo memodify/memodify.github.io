@@ -132,7 +132,6 @@ const HeadingLinks = () => {
     <ul
       className="
         flex flex-col
-        md:text-sm
         [&>*.h1]:font-semibold
         [&>li]:leading-[1.5rem]
         sticky top-16
