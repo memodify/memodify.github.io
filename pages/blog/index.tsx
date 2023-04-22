@@ -8,17 +8,15 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 dayjs.extend(utc);
 
-const Page: NextPage<Props> = (props) => {
-  return (
-    <div className="min-h-screen">
-      <Header />
-      <Main {...props} />
-      <div className="sticky top-[100vh]">
-        <Footer />
-      </div>
+const Page: NextPage<Props> = (props) => (
+  <div id="blog-page" className="min-h-screen">
+    <Header />
+    <Main {...props} />
+    <div className="sticky top-[100vh]">
+      <Footer />
     </div>
-  );
-};
+  </div>
+);
 
 const Main: NextPage<Props> = (props) => {
   const toLink = (s: string) => {

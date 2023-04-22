@@ -9,22 +9,20 @@ import WhatsThis from "../components/WhatsThis";
 import Link from "next/link";
 import { LeftDrawer, closeLeftDrawer } from "../components/elements/LeftDrawer";
 
-const Home: NextPage = () => {
-  return (
-    <>
-      <Header />
-      <Hero />
-      <WhatsThis />
-      <Feature />
-      <LiveDemo />
-      <Pricing />
-      <Footer />
-      <LeftDrawer>
-        <HeadingLines />
-      </LeftDrawer>
-    </>
-  );
-};
+const Home: NextPage = () => (
+  <div id="landing-page">
+    <Header />
+    <Hero />
+    <WhatsThis />
+    <Feature />
+    <LiveDemo />
+    <Pricing />
+    <Footer />
+    <LeftDrawer>
+      <HeadingLines />
+    </LeftDrawer>
+  </div>
+);
 
 export default Home;
 
