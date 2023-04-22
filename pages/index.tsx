@@ -27,31 +27,30 @@ const Home: NextPage = () => (
 export default Home;
 
 const HeadingLines = () => (
-  <>
-    <ul className="px-12">
-      {(
-        [
-          ["/", "Home"],
-          ["/#whats-this", "What's this"],
-          ["/#feature", "Feature"],
-          ["/#live-demo", "Live Demo"],
-          ["/#pricing", "Pricing"],
-          ["/docs", "Docs"],
-          ["/blog/", "Blog"],
-        ] as const
-      ).map(([href, label]) => {
-        return (
-          <li
-            className="
-          [&:not(:nth-of-type(1))]:pt-4"
-            key={label}
-          >
-            <Link href={href} onClick={closeLeftDrawer}>
-              {label}
-            </Link>
-          </li>
-        );
-      })}
-    </ul>
-  </>
+  <ul
+    className="
+      px-12
+      [&>li:not(:nth-of-type(1))]:pt-4
+      "
+  >
+    {(
+      [
+        ["/", "Home"],
+        ["/#whats-this", "What's this"],
+        ["/#feature", "Feature"],
+        ["/#live-demo", "Live Demo"],
+        ["/#pricing", "Pricing"],
+        ["/docs", "Docs"],
+        ["/blog/", "Blog"],
+      ] as const
+    ).map(([href, label]) => {
+      return (
+        <li key={label}>
+          <Link href={href} onClick={closeLeftDrawer}>
+            {label}
+          </Link>
+        </li>
+      );
+    })}
+  </ul>
 );
