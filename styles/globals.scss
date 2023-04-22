@@ -55,12 +55,3 @@ html:has(#docs-page) {
     scroll-padding-top: 100px; // header height
   }
 }
-
-@media (width < 768px) {
-  html {
-    scroll-padding-top: calc(156px - var(--header-height));
-  }
-  html:has(#docs-page) {
-    scroll-padding-top: 156px; // header height
-  }
-}
