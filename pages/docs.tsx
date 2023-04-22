@@ -44,7 +44,7 @@ const Main: NextPage<Props> = (props: Props) => (
       className="
         hidden
         md:block
-        w-1/5
+        sm:w-1/5
          [&_*]:dark:text-gray-500
         "
     >
@@ -54,8 +54,8 @@ const Main: NextPage<Props> = (props: Props) => (
     {/* Body */}
     <div
       className="
-           w-4/5
-           "
+        w-full sm:w-4/5
+        "
     >
       {sections
         .map((sec) => [createElement(sec)] as const)
