@@ -23,13 +23,13 @@ const Docs: NextPage<Props> = (props) => {
       <Main {...props} />
       <Footer />
       <LeftDrawer>
-        <HeadingLinks />
+        <HeadingLinks {...props} />
       </LeftDrawer>
     </div>
   );
 };
 
-const Main: NextPage<Props> = () => (
+const Main: NextPage<Props> = (props: Props) => (
   <div
     className="
       container
@@ -45,15 +45,19 @@ const Main: NextPage<Props> = () => (
       className="
         hidden
         md:block
-        md:w-1/5
+        w-1/5
          [&_*]:dark:text-gray-500
         "
     >
-      <HeadingLinks />
+      <HeadingLinks {...props} />
     </div>
 
     {/* Body */}
-    <div className="md:w-4/5">
+    <div
+      className="
+           w-4/5
+           "
+    >
       {sections
         .map((sec) => [createElement(sec)] as const)
         .map(([e], idx) => (
@@ -106,7 +110,7 @@ const sections = [
   FeatureList,
 ] as const;
 
-const HeadingLinks = () => {
+const HeadingLinks = (props: Props) => {
   const children = sections.map((f) => f({}).props.children).flat();
   const items = children
     .filter((e) => e.type.match)
@@ -132,9 +136,15 @@ const HeadingLinks = () => {
     <ul
       className="
         flex flex-col
-        [&>*.h1]:font-semibold
+        px-12 sm:px-0
+        pb-12 sm:pb-0
+
+        [&>li:not(:nth-of-type(1))]:pt-4 sm:[&>li:not(:nth-of-type(1))]:pt-2
+
+        sm:sticky sm:top-16
+
+        [&>.h1]:font-semibold
         [&>li]:leading-[1.5rem]
-        sticky top-16
         "
     >
       {items.map((e) => (
@@ -144,6 +154,7 @@ const HeadingLinks = () => {
           </Link>
         </li>
       ))}
+      <li>Built at {props.meta.builtAt.toISOString()}</li>
     </ul>
   );
 };
