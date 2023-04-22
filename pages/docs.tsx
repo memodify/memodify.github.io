@@ -45,7 +45,7 @@ const Main: NextPage<Props> = () => (
       className="
         hidden
         md:block
-        md:w-1/5 mb-10
+        md:w-1/5
          [&_*]:dark:text-gray-500
         "
     >
