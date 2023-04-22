@@ -74,6 +74,7 @@ const Main: NextPage<Props> = (props: Props) => (
               [&_h2]:dark:text-gray-300
               [&_h3]:dark:text-gray-300
               [&_p>code]:dark:text-gray-300
+              [&_p]:break-words
               '
             key={`section${idx}`}
           >
