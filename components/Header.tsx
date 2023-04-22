@@ -71,6 +71,7 @@ const HeaderLg = (
           <Link
             href={href}
             className="mr-5 hover:text-gray-900 hover:dark:text-gray-500"
+            key={href}
           >
             {label}
           </Link>
@@ -106,10 +107,13 @@ const HeaderLg = (
 
 const HeaderSm = (
   <>
-    <div className="
-           sm:hidden flex flex-wrap container mx-auto p-5 flex-row
-           justify-between [#blog-page_&]:justify-end
-           items-center">
+    <div
+      className="
+        sm:hidden flex flex-wrap container mx-auto p-5 flex-row
+        justify-between [#blog-page_&]:justify-end
+        items-center
+        "
+    >
       <label
         htmlFor="left-drawer-toggle-state"
         className="[#blog-page_&]:hidden
