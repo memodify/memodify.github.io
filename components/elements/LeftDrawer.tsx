@@ -20,32 +20,34 @@ export const closeLeftDrawer = () => {
   (checkbox as any).checked = false;
 };
 
-export const LeftDrawer = ({ children }: { children: JSX.Element }) => {
-  return (
-    <div className="">
-      {/* NOTE: This `input` must be here since this has `peer` class of tailwindcss */}
-      <input id="left-drawer-toggle-state" type="checkbox" className="peer hidden" />
-      <div
-        className="
-           w-3/5
+export const LeftDrawer = ({ children }: { children: JSX.Element }) => (
+  <>
+    {/* NOTE: This `input` must be here since this has `peer` class of tailwindcss */}
+    <input
+      id="left-drawer-toggle-state"
+      type="checkbox"
+      className="peer hidden"
+    />
+    <div
+      className="
            bg-white dark:bg-gray-800
            fixed top-0 left-0
-           p-10
            z-30
-           h-screen
            opacity-95
            peer-checked:translate-x-0
            transition-transform
            -translate-x-full
-           duration-300"
-      >
-        <div>
-          <label htmlFor="left-drawer-toggle-state" className="flex justify-end">
-            {iconXMark}
-          </label>
-        </div>
-        {children}
+           duration-200
+           h-screen
+           overflow-y-auto
+           "
+    >
+      <div>
+        <label htmlFor="left-drawer-toggle-state" className="flex justify-end">
+          {iconXMark}
+        </label>
       </div>
+      {children}
     </div>
-  );
-};
+  </>
+);
