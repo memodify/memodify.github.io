@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Feature from "../components/Feature";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -9,8 +9,8 @@ import WhatsThis from "../components/WhatsThis";
 import Link from "next/link";
 import { LeftDrawer, closeLeftDrawer } from "../components/elements/LeftDrawer";
 
-const Home: NextPage = () => (
-  <div id="landing-page">
+const Home: NextPage<Props> = (props) => (
+  <div id="landing-page" data-generated-date={props.meta.builtAt.toISOString()}>
     <Header />
     <Hero />
     <WhatsThis />
@@ -55,3 +55,19 @@ const HeadingLines = () => (
     })}
   </ul>
 );
+
+type Props = {
+  meta: {
+    builtAt: Date;
+  };
+};
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  return {
+    props: {
+      meta: {
+        builtAt: new Date(),
+      },
+    },
+  };
+};

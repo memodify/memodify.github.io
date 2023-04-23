@@ -15,21 +15,21 @@ import { LeftDrawer, closeLeftDrawer } from "../components/elements/LeftDrawer";
 require("prismjs/themes/prism-tomorrow.min.css");
 // require("prismjs/themes/prism-okaidia.min.css");
 
-const Docs: NextPage<Props> = (props) => {
+const Docs: NextPage = () => {
   return (
     // NOTE: docs-page is needed for scroll-padding defined in globals.css
     <div id="docs-page">
       <Header />
-      <Main {...props} />
+      <Main />
       <Footer />
       <LeftDrawer>
-        <HeadingLinks {...props} />
+        <HeadingLinks />
       </LeftDrawer>
     </div>
   );
 };
 
-const Main: NextPage<Props> = (props: Props) => (
+const Main: NextPage = () => (
   <div
     className="
       container mx-auto
@@ -48,7 +48,7 @@ const Main: NextPage<Props> = (props: Props) => (
          [&_*]:dark:text-gray-500
         "
     >
-      <HeadingLinks {...props} />
+      <HeadingLinks />
     </div>
 
     {/* Body */}
@@ -87,22 +87,6 @@ const Main: NextPage<Props> = (props: Props) => (
 
 export default Docs;
 
-type Props = {
-  meta: {
-    builtAt: Date;
-  };
-};
-
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  return {
-    props: {
-      meta: {
-        builtAt: new Date(),
-      },
-    },
-  };
-};
-
 const sections = [
   GettingStarted,
   RemarkableFeatures,
@@ -111,7 +95,7 @@ const sections = [
   FeatureList,
 ] as const;
 
-const HeadingLinks = (props: Props) => {
+const HeadingLinks = () => {
   const children = sections.map((f) => f({}).props.children).flat();
   const items = children
     .filter((e) => e.type.match)
@@ -158,7 +142,6 @@ const HeadingLinks = (props: Props) => {
           </Link>
         </li>
       ))}
-      <li>Built at {props.meta.builtAt.toISOString()}</li>
     </ul>
   );
 };
