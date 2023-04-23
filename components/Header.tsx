@@ -12,7 +12,7 @@ export default function Header() {
         h-16
         backdrop-blur-sm"
     >
-      {HeaderLg}
+      {HeaderMd}
       {HeaderSm}
     </header>
   );
@@ -48,10 +48,13 @@ const iconBar4 = (
   </svg>
 );
 
-const HeaderLg = (
-  <div className="hidden sm:flex container mx-auto flex-wrap p-5 flex-col md:flex-row items-center">
+const HeaderMd = (
+  <div className="
+         container mx-auto
+         hidden md:flex
+         flex-wrap p-5 items-center">
     <Link href="/">
-      <span className="flex font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <span className="hidden lg:flex font-medium items-center text-gray-900 mb-4 md:mb-0">
         <Logo width={24} height={24} />
         <p className="ml-2 text-lg font-['Lato'] dark:text-gray-300">
           Memodify
@@ -84,7 +87,7 @@ const HeaderLg = (
         Blog
       </Link>
       <a
-        className="mr-5 text-gray-500"
+        className="mr-5 text-gray-500 hidden lg:flex"
         href="https://github.com/memodify"
         target="github/memodify"
       >
@@ -106,50 +109,48 @@ const HeaderLg = (
 );
 
 const HeaderSm = (
-  <>
-    <div
+  <div
+    className="
+      md:hidden
+      flex flex-wrap container mx-auto flex-row
+      p-5 [#blog-entry-page_&]:px-0
+      justify-between items-center
+      [#blog-page_&]:justify-end
+      [#blog-entry-page_&]:justify-end
+      "
+  >
+    <label
+      htmlFor="left-drawer-toggle-state"
       className="
-        sm:hidden
-        flex flex-wrap container mx-auto flex-row
-        p-5 [#blog-entry-page_&]:px-0
-        justify-between items-center
-        [#blog-page_&]:justify-end
-        [#blog-entry-page_&]:justify-end
+        [#blog-page_&]:hidden
+        [#blog-entry-page_&]:hidden
         "
     >
-      <label
-        htmlFor="left-drawer-toggle-state"
-        className="
-          [#blog-page_&]:hidden
-          [#blog-entry-page_&]:hidden
-          "
+      {iconBar4}
+    </label>
+    <nav className="flex">
+      <Link
+        href="/"
+        className="mr-5 hover:dark:text-gray-500 [#landing-page_&]:hidden"
       >
-        {iconBar4}
-      </label>
-      <nav className="flex">
-        <Link
-          href="/"
-          className="mr-5 hover:dark:text-gray-500 [#landing-page_&]:hidden"
-        >
-          Home
-        </Link>
+        Home
+      </Link>
 
-        <Link
-          href="/docs"
-          className="mr-5 hover:dark:text-gray-500 [#docs-page_&]:hidden"
-        >
-          Docs
-        </Link>
+      <Link
+        href="/docs"
+        className="mr-5 hover:dark:text-gray-500 [#docs-page_&]:hidden"
+      >
+        Docs
+      </Link>
 
-        <Link
-          href="/blog"
-          className="mr-5 hover:dark:text-gray-500 [#blog-page_&]:hidden"
-        >
-          Blog
-        </Link>
+      <Link
+        href="/blog"
+        className="mr-5 hover:dark:text-gray-500 [#blog-page_&]:hidden"
+      >
+        Blog
+      </Link>
 
-        <DarkModeToggleButton />
-      </nav>
-    </div>
-  </>
+      <DarkModeToggleButton />
+    </nav>
+  </div>
 );
