@@ -68,7 +68,7 @@ const Main: NextPage = () => (
               [&_code[class^="language-"]]:text-[9pt]
               [&_code[class^="language-"]]:leading-none
               [&_pre[class^="language-"]]:leading-none
-              [&_*]:dark:text-gray-500
+              [&_*]:dark:text-gray-400
               [&_summary]:dark:text-gray-400
               [&_h1]:dark:text-gray-300
               [&_h2]:dark:text-gray-300
