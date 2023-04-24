@@ -45,7 +45,7 @@ const Main: NextPage = () => (
         hidden
         sm:block
         sm:w-2/5 md:w-1/3 lg:w-1/4
-         [&_*]:dark:text-gray-500
+         [&_*]:dark:text-gray-400
         "
     >
       <HeadingLinks />
