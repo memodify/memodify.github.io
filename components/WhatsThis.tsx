@@ -24,7 +24,7 @@ export default function Feature() {
             </li>
             <li className="mt-4">
               <a className="underline decoration-pink-500">Standalone</a> &{" "}
-              <a className="underline decoration-yellow-400">In-brower</a>
+              <a className="underline decoration-yellow-400">In-browser</a>
             </li>
           </ul>
         </div>

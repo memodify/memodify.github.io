@@ -25,7 +25,7 @@ export default function Feature() {
         <FeatureRight
           {...{
             title: "Dark mode",
-            text: "Dark mode is supported for sure. You can change the mode whenever you want throught the command palette.",
+            text: "Dark mode is supported for sure. You can change the mode whenever you want through the command palette.",
             imagePath: "/dark-mode.png",
           }}
         />
@@ -55,7 +55,7 @@ export default function Feature() {
           imagePath="/label-status.png"
           title="Organize notes"
           text={
-            "Easily organize your notes with label which is a popular function as metadata. You can star, like, complete and trash notes, then you can filter with the statues."
+            "Easily organize your notes with labels, a popular metadata function. You can star, like, complete and trash notes, then you can filter with the statues."
           }
         />
 
@@ -91,8 +91,7 @@ export default function Feature() {
           </FeatureItem>
           <FeatureItem title={"All in local"} icon={svgInbox}>
             <p className="leading-relaxed text-base">
-              All your data is in your local machine. No your data go through
-              the Internet unintentionally. No sync, no share and no publish.
+              All your data is in your local machine. Your data does not go through the Internet unintentionally. No sync, no share and no publish.
               Memodify never sends your data to any remote hosts without your
               directions.
             </p>
@@ -117,8 +116,7 @@ export default function Feature() {
           <FeatureItem title={"Zen mode"} icon={svgLightening}>
             <p>
               &ldquo;Zen&ldquo; mode allows you to concentrate on a task with a
-              simplified UI. In memodify The simplest layout of Memodify
-              consists of a few text fields.
+              simplified UI. In Memodify, the simplest layout consists of a few text fields.
             </p>
           </FeatureItem>
           <FeatureItem title={"Encryption"} icon={svgLightening}>

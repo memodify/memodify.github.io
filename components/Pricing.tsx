@@ -7,7 +7,7 @@ export default function Pricing() {
             Pricing
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500 dark:text-gray-400">
-            There is no plans except for free.
+            There are no plans except for free.
           </p>
         </div>
         <div className="flex flex-col items-center">
