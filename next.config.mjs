@@ -45,15 +45,13 @@ const nextConfig = {
     return config;
   },
 
-  experimental: {
-    appDir: true,
-  },
+  appDir: true,
 };
 
 import { withSuperjson } from "next-superjson";
 
 const config = withMDX(
-  withSuperjson()({ ...nextConfig, reactStrictMode: true })
+  withSuperjson()({ ...nextConfig, reactStrictMode: true }),
 );
 
 export default config;
