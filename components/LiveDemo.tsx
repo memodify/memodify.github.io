@@ -23,7 +23,7 @@ export function LiveDemo() {
             </button>
           </p>
         </div>
-        <div className="flex-wrap -m-4 hidden sm:flex">
+        <div className="flex-wrap -m-4 hidden sm:flex pb-6">
           <iframe
             src={livedemoURL}
             className="border-none m-0 p-0 w-full h-[496px]" // height={`${240 * 2 + 8 * 2}px`} // 240 is the height of /demp/editor-preview. 8 is body's margin of iframe.
