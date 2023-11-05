@@ -4,16 +4,16 @@ export function LiveDemo() {
     "http://localhost:3000/demo/editor-preview";
   return (
     <section id="live-demo" className="text-gray-600">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-col text-center w-full mb-8">
-          <h1 className="sm:text-3xl text-2xl font-bold text-gray-900 mb-2 dark:text-gray-300">
+      <div className="container mx-auto px-5 py-24">
+        <div className="mb-8 flex w-full flex-col text-center">
+          <h1 className="mb-2 text-2xl font-bold text-gray-900 dark:text-gray-300 sm:text-3xl">
             Live Demo
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500 dark:text-gray-400">
+          <p className="mx-auto text-base leading-relaxed text-gray-500 dark:text-gray-400 lg:w-2/3">
             You can try power of MDX.
           </p>
-          <p className="mt-4 sm:hidden block">
-            <button className="inline-flex text-yellow-500 bg-yellow-100 hover:text-yellow-600 hover:bg-yellow-200 hover:drop-shadow-md border-0 py-2 px-6 focus:outline-none rounded text-lg dark:brightness-90">
+          <p className="mt-4 block sm:hidden">
+            <button className="inline-flex rounded border-0 bg-yellow-100 px-6 py-2 text-lg text-yellow-500 hover:bg-yellow-200 hover:text-yellow-600 hover:drop-shadow-md focus:outline-none dark:brightness-90">
               <a
                 href="//memodify.app/demo/editor-preview"
                 target="demo/editor-preview"
@@ -23,14 +23,14 @@ export function LiveDemo() {
             </button>
           </p>
         </div>
-        <div className="flex-wrap -m-4 hidden sm:flex pb-6">
+        <div className="-m-4 hidden flex-wrap pb-6 sm:flex">
           <iframe
             src={livedemoURL}
-            className="border-none m-0 p-0 w-full h-[496px]" // height={`${240 * 2 + 8 * 2}px`} // 240 is the height of /demp/editor-preview. 8 is body's margin of iframe.
+            className="m-0 h-[496px] w-full border-none p-0" // height={`${240 * 2 + 8 * 2}px`} // 240 is the height of /demp/editor-preview. 8 is body's margin of iframe.
             loading="lazy"
           />
         </div>
-        <p className="text-gray-400 text-left text-sm hidden sm:block">
+        <p className="hidden text-left text-sm text-gray-400 sm:block">
           If you cannot see the demo, please accept 3rd party cookie on your
           browser settings.
         </p>
