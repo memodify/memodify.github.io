@@ -6,6 +6,11 @@ You can put a configuration file to give some values like secrets to the Memodif
 `~/.config/memodify/config.yaml`
 
 ```yaml
+vault:
+  # Given by APP_PATH_ROOT or VAULT_DIRECTORY.
+  # macOS: userData path: "~/Library/Application Support/memodify" by default.
+  directory: "~/.memodify/vault"
+
 github:
   # https://github.com/settings/tokens
   token: "ghp_************************************"
