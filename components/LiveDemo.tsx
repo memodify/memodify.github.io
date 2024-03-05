@@ -1,7 +1,7 @@
 export function LiveDemo() {
   const livedemoURL =
     process.env.NEXT_PUBLIC_LIVEDEMO_URL ??
-    "http://localhost:3000/demo/editor-preview";
+    "//localhost:5173/demo-editor-preview";
   return (
     <section id="live-demo" className="text-gray-600">
       <div className="container mx-auto px-5 py-24">
