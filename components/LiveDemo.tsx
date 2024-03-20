@@ -15,7 +15,7 @@ export function LiveDemo() {
           <p className="mt-4 block sm:hidden">
             <button className="inline-flex rounded border-0 bg-yellow-100 px-6 py-2 text-lg text-yellow-500 hover:bg-yellow-200 hover:text-yellow-600 hover:drop-shadow-md focus:outline-none dark:brightness-90">
               <a
-                href="//memodify.app/demo/editor-preview"
+                href="//memodify.app/demo-editor-preview"
                 target="demo/editor-preview"
               >
                 open a demo page
@@ -32,7 +32,15 @@ export function LiveDemo() {
         </div>
         <p className="hidden text-left text-sm text-gray-400 sm:block">
           If you cannot see the demo, please accept 3rd party cookie on your
-          browser settings.
+          browser settings, or open{" "}
+          <a
+            href="//memodify.app/demo-editor-preview"
+            target="demo/editor-preview"
+            className="underline"
+          >
+            the demo page
+          </a>{" "}
+          directly.
         </p>
       </div>
     </section>
