@@ -30,7 +30,7 @@
     "autoprefixer": "^10.3.7",
     "babel-loader": "^9.1.0",
     "dayjs": "^1.11.7",
-    "eslint": "^9.0",
+    "eslint": "^8",
     "eslint-config-next": "^14",
     "eslint-config-prettier": "^9",
     "eslint-plugin-tailwindcss": "^3.5.0",
