@@ -20,11 +20,11 @@ class MyDocument extends Document {
           <meta property="og:type" content="website" />
           <meta
             property="og:title"
-            content="Memodify - Simple Markdown Editor"
+            content="Memodify - Simple MDX Editor"
           />
           <meta
             property="og:description"
-            content="Create notes in Markdown, which are for everything personally."
+            content="Create notes in MDX, which are for everything personally."
           />
           <meta property="og:url" content="https://memodify.com/" />
           <meta
